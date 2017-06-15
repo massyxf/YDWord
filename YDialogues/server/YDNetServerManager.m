@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "YDJSCBWordModel.h"
 #import "YDRegexTool.h"
+#import "YDDBTool.h"
 
 @interface YDNetServerManager ()
 
@@ -81,8 +82,10 @@
                   if (isCnWord) {
                       wordModel = [[YDCnWordModel alloc] initWithDictionary:result
                                                                       error:nil];
+                      [YDDBTool saveCnWord:(YDCnWordModel *)wordModel];
                   }else{
                       wordModel = [[YDEnWordModel alloc] initWithDictionary:result error:nil];
+                      [YDDBTool saveEnWord:(YDEnWordModel *)wordModel];
                   }
               }
               success(wordModel);

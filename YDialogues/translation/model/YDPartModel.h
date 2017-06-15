@@ -24,12 +24,14 @@
 
 @end
 
+@protocol YDCnMeanModel;
+
 @interface YDCnPartModel : YDPartModel
 
 /** part*/
 @property(nonatomic,copy)NSString *part_name;
 
 /** means*/
-@property(nonatomic,strong)NSArray<YDCnMeanModel *> *means;
+@property(nonatomic,strong)NSArray<YDCnMeanModel> *means;
 
 @end

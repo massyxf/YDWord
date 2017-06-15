@@ -28,6 +28,8 @@
 @end
 
 
+@protocol YDEnPartModel;
+
 @interface YDEnSymbolModel : YDSymbolModel
 
 /** en*/
@@ -37,15 +39,17 @@
 @property(nonatomic,copy)NSString *ph_am;
 
 /** parts*/
-@property(nonatomic,strong)NSArray<YDEnPartModel *> *parts;
+@property(nonatomic,strong)NSArray<YDEnPartModel> *parts;
 
 @end
 
 
+@protocol YDCnPartModel;
+
 @interface YDCnSymbolModel : YDSymbolModel
 
 /** parts*/
-@property(nonatomic,strong)NSArray<YDCnPartModel *> *parts;
+@property(nonatomic,strong)NSArray<YDCnPartModel> *parts;
 
 /** symbol*/
 @property(nonatomic,copy)NSString *word_symbol;

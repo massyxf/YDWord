@@ -19,6 +19,7 @@
 
 @end
 
+@protocol YDEnSymbolModel;
 
 @interface YDEnWordModel : YDJSCBWordModel
 
@@ -29,16 +30,16 @@
 @property(nonatomic,strong)YDExchange *exchange;
 
 /** symbols*/
-@property(nonatomic,strong)NSArray<YDEnSymbolModel *> *symbols;
+@property(nonatomic,strong)NSArray <YDEnSymbolModel> *symbols;
 
 @end
 
-
+@protocol YDCnSymbolModel;
 
 @interface YDCnWordModel : YDJSCBWordModel
 
 /** symbols*/
-@property(nonatomic,strong)NSArray<YDCnSymbolModel *> *symbols;
+@property(nonatomic,strong)NSArray <YDCnSymbolModel> *symbols;
 
 @end
 

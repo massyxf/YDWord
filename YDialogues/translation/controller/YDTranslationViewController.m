@@ -7,6 +7,7 @@
 //
 
 #import "YDTranslationViewController.h"
+#import "YDNetServerManager.h"
 
 @interface YDTranslationViewController ()
 
@@ -16,7 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [YDNetServerManager getWords:@"他们"
+                         success:^(id obj) {
+                             
+                         } fail:^(NSError *error) {
+                             
+                         }];
 }
 
 - (void)didReceiveMemoryWarning {
