@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A68741EF2BF6E00326466 /* YDTransWordView.m */; };
 		428BD5941EE8E19800463C1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5931EE8E19800463C1E /* main.m */; };
 		428BD5971EE8E19800463C1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5961EE8E19800463C1E /* AppDelegate.m */; };
 		428BD59A1EE8E19800463C1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5991EE8E19800463C1E /* ViewController.m */; };
@@ -76,8 +75,6 @@
 
 /* Begin PBXFileReference section */
 		339735FA8DAFA5E4C483A4C5 /* Pods-YDialogues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDialogues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDialogues/Pods-YDialogues.debug.xcconfig"; sourceTree = "<group>"; };
-		422A68731EF2BF6E00326466 /* YDTransWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransWordView.h; sourceTree = "<group>"; };
-		422A68741EF2BF6E00326466 /* YDTransWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTransWordView.m; sourceTree = "<group>"; };
 		428BD58F1EE8E19800463C1E /* YDialogues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDialogues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428BD5931EE8E19800463C1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		428BD5951EE8E19800463C1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,15 +202,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		422A686F1EF2BF1600326466 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				422A68731EF2BF6E00326466 /* YDTransWordView.h */,
-				422A68741EF2BF6E00326466 /* YDTransWordView.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		428BD5861EE8E19800463C1E = {
 			isa = PBXGroup;
 			children = (
@@ -396,9 +384,9 @@
 		428BD5E01EE922FE00463C1E /* translation */ = {
 			isa = PBXGroup;
 			children = (
-				422A686F1EF2BF1600326466 /* view */,
 				428BD5E11EE922FE00463C1E /* controller */,
 				428BD5E21EE922FE00463C1E /* model */,
+				428BD5E31EE922FE00463C1E /* view */,
 			);
 			path = translation;
 			sourceTree = "<group>";
@@ -427,6 +415,13 @@
 				4298A6371EEA90B20097BF1D /* YDCnMeanModel.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		428BD5E31EE922FE00463C1E /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		4298A6101EEA4F070097BF1D /* server */ = {
@@ -725,7 +720,6 @@
 				428BD5D91EE8EB7E00463C1E /* YDDBTool.m in Sources */,
 				4298A6321EEA801D0097BF1D /* YDExchange.m in Sources */,
 				42CCB47F1EF23C2A00995C0B /* DOUAudioStreamer.m in Sources */,
-				422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */,
 				42CCB4771EF23C2A00995C0B /* DOUAudioFilePreprocessor.m in Sources */,
 				428BD5D51EE8E53A00463C1E /* NSError+Custom.m in Sources */,
 				42CCB4751EF23C2A00995C0B /* DOUAudioDecoder.m in Sources */,

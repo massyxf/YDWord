@@ -1,0 +1,24 @@
+//
+//  YDialogue.pch
+//  YDialogues
+//
+//  Created by yxf on 2017/6/8.
+//  Copyright © 2017年 yxf. All rights reserved.
+//
+
+#ifndef YDialogue_pch
+#define YDialogue_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
+#define YDNaviHeight 64
+#define YDTabbarHeight 49
+
+#import "NSError+Custom.h"
+#import "UILabel+Normal.h"
+
+#endif /* YDialogue_pch */
