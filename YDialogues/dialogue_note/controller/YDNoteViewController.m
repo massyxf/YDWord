@@ -9,11 +9,15 @@
 #import "YDNoteViewController.h"
 #import "YDNoteCell.h"
 #import "YDEditNoteViewController.h"
+#import "YDDBTool+noteCache.h"
 
 @interface YDNoteViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
 /** 单词记录*/
 @property(nonatomic,weak)UITableView *diaTableView;
+
+/*models*/
+@property (nonatomic,strong)NSMutableArray *noteArray;
 
 @end
 
@@ -36,6 +40,27 @@
                                                             target:self
                                                             action:@selector(addNote:)];
     self.navigationItem.rightBarButtonItem = item;
+    [self loadData];
+}
+
+#pragma mark - data
+-(void)loadData{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSArray *notes = [[YDDBTool shareInstance] selectNotes];
+        [self.noteArray addObjectsFromArray:notes];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.diaTableView reloadData];
+        });
+    });
+}
+
+#pragma mark - getter
+-(NSMutableArray *)noteArray{
+    if (!_noteArray) {
+        _noteArray = [NSMutableArray array];
+    }
+    return _noteArray;
 }
 
 #pragma mark - action
@@ -49,7 +74,7 @@
 #pragma mark - UITableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.noteArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,6 +85,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YDNoteCell *cell = [tableView dequeueReusableCellWithIdentifier:YDNoteCellIdentifier forIndexPath:indexPath];
+    cell.noteModel = self.noteArray[indexPath.item];
     return cell;
 }
 

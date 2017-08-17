@@ -17,7 +17,7 @@
 #import "YDNoteWordModel.h"
 #import "YDNoteModel.h"
 
-#define DialogueDB @"DialogueDB"
+#define DialogueDB @"DialogueDB.db"
 
 @interface YDDBTool ()
 

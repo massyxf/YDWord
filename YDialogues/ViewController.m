@@ -11,8 +11,7 @@
 #import "YDEditNoteViewController.h"
 #import "YDGameViewController.h"
 #import "YDTranslationViewController.h"
-
-#import "YDDBTool+cacheCheck.h"
+#import "YDDBTool+noteCache.h"
 
 @interface ViewController ()
 
@@ -26,12 +25,12 @@
     
     BOOL noteSaved = [YDDBTool everSavedNote];
     NSMutableArray *subVcs = [NSMutableArray array];
-    if (noteSaved) {
-        UINavigationController *noteVc = [self naviWithRootVcClass:[YDNoteViewController class] title:@"单词本" img:@""];
-        [subVcs addObject:noteVc];
-    }else{
-        UINavigationController *editVc = [self naviWithRootVcClass:[YDEditNoteViewController class] title:@"单词本" img:@""];
-        [subVcs addObject:editVc];
+    UINavigationController *noteVc = [self naviWithRootVcClass:[YDNoteViewController class] title:@"单词本" img:@""];
+    [subVcs addObject:noteVc];
+    if (!noteSaved) {
+        YDEditNoteViewController *editVc = [[YDEditNoteViewController alloc] init];
+        noteVc.navigationItem.hidesBackButton = YES;
+        [noteVc pushViewController:editVc animated:NO];
     }
     
     UINavigationController *gameVc = [self naviWithRootVcClass:[YDGameViewController class] title:@"游戏" img:@""];

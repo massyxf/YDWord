@@ -15,7 +15,7 @@
 +(BOOL)everSavedNote;
 
 //增
--(void)saveNote:(YDNoteModel *)note;
+-(BOOL)saveNote:(YDNoteModel *)note;
 
 //查
 -(NSArray<YDNoteModel *> *)selectNotes;

@@ -8,6 +8,7 @@
 
 #import "YDNoteCell.h"
 #import <Masonry/Masonry.h>
+#import "YDNoteModel.h"
 
 @interface YDNoteCell ()
 
@@ -31,13 +32,13 @@
                                            numberOfLines:0];
         [self.contentView addSubview:titleLabel];
         self.titleLabel = titleLabel;
-        titleLabel.text = @"title title title title title title title title title title title title ";
+//        titleLabel.text = @"title title title title title title title title title title title title ";
         
         UILabel *dateLabel = [UILabel labelWithFontSize:14
                                               textColor:[UIColor grayColor]];
         [self.contentView addSubview:dateLabel];
         self.dateLabel = dateLabel;
-        dateLabel.text = @"2017-06-08";
+//        dateLabel.text = @"2017-06-08";
         
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(self.contentView).offset(5);
@@ -48,11 +49,17 @@
         [dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.trailing.mas_equalTo(self.contentView).offset(-5);
             make.bottom.mas_equalTo(self.contentView);
-            make.size.mas_equalTo(CGSizeMake(80, 20));
+            make.size.mas_equalTo(CGSizeMake(120, 20));
         }];
         
     }
     return self;
+}
+
+-(void)setNoteModel:(YDNoteModel *)noteModel{
+    _noteModel = noteModel;
+    _titleLabel.text = noteModel.title;
+    _dateLabel.text = noteModel.date;
 }
 
 @end

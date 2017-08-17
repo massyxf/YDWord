@@ -24,18 +24,17 @@
     return [tool createTable:wordTable];
 }
 
--(void)saveWords:(NSArray<YDNoteWordModel *> *)words inNote:(YDNoteModel *)note{
+-(BOOL)saveWords:(NSArray<YDNoteWordModel *> *)words inNote:(YDNoteModel *)note{
     FMDatabase *db = self.fmdb;
-    if ([db open]) {
-        for (YDNoteWordModel *model in words) {
-            BOOL success = [db executeUpdate:@"INSERT INTO word_table(title,trans,height,dateId,uniqId,noteId) values (?,?,?,?,?,?);",model.title,model.trans,model.height,model.dateId,model.uniqId,note.uniqId];
-            if (!success) {
-                NSLog(@"save word error:%@",model);
-                break;
-            }
+    BOOL success = NO;
+    for (YDNoteWordModel *model in words) {
+        success = [db executeUpdate:@"INSERT INTO word_table(title,trans,height,dateId,uniqId,noteId) values (?,?,?,?,?,?);",model.title,model.trans,@(model.height),@(model.dateId),@(model.uniqId),@(note.uniqId)];
+        if (!success) {
+            NSLog(@"save word error:%@",model);
+            break;
         }
-        [db close];
     }
+    return success;
 }
 
 -(NSArray<YDNoteWordModel *> *)selectWordsWithNote:(YDNoteModel *)note{

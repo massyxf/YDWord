@@ -13,7 +13,7 @@
 +(BOOL)initialWordTable;
 
 //增
--(void)saveWords:(NSArray<YDNoteWordModel *> *)words inNote:(YDNoteModel *)note;
+-(BOOL)saveWords:(NSArray<YDNoteWordModel *> *)words inNote:(YDNoteModel *)note;
 
 //查
 -(NSArray<YDNoteWordModel *> *)selectWordsWithNote:(YDNoteModel *)note;

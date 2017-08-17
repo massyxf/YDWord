@@ -59,6 +59,7 @@
 		42CCB4831EF23C2A00995C0B /* DOUSimpleHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4701EF23C2900995C0B /* DOUSimpleHTTPRequest.m */; };
 		42CCB4841EF23C2A00995C0B /* NSData+DOUMappedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4721EF23C2900995C0B /* NSData+DOUMappedFile.m */; };
 		42CCB48A1EF262A700995C0B /* NSString+YDHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4891EF262A700995C0B /* NSString+YDHandle.m */; };
+		42D756401F45BECA0025B7D6 /* YDTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */; };
 		4C999AD4587F3DB61D4D85F9 /* libPods-YDialogues.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D89C3DC092C00F9C2F034C9 /* libPods-YDialogues.a */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +191,8 @@
 		42CCB4721EF23C2900995C0B /* NSData+DOUMappedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DOUMappedFile.m"; sourceTree = "<group>"; };
 		42CCB4881EF262A700995C0B /* NSString+YDHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YDHandle.h"; sourceTree = "<group>"; };
 		42CCB4891EF262A700995C0B /* NSString+YDHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YDHandle.m"; sourceTree = "<group>"; };
+		42D7563E1F45BECA0025B7D6 /* YDTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTimeTool.h; sourceTree = "<group>"; };
+		42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTimeTool.m; sourceTree = "<group>"; };
 		5E3A8FAAD343549318C736D5 /* Pods-YDialogues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDialogues.release.xcconfig"; path = "Pods/Target Support Files/Pods-YDialogues/Pods-YDialogues.release.xcconfig"; sourceTree = "<group>"; };
 		8D89C3DC092C00F9C2F034C9 /* libPods-YDialogues.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YDialogues.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -485,6 +488,8 @@
 			children = (
 				4298A63A1EEA961A0097BF1D /* YDRegexTool.h */,
 				4298A63B1EEA961A0097BF1D /* YDRegexTool.m */,
+				42D7563E1F45BECA0025B7D6 /* YDTimeTool.h */,
+				42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */,
 				42CCB44A1EF23C2900995C0B /* src */,
 			);
 			path = tool;
@@ -741,6 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428BD5F21EE9501B00463C1E /* YDAddDialogueViewController.m in Sources */,
+				42D756401F45BECA0025B7D6 /* YDTimeTool.m in Sources */,
 				4298A63C1EEA961A0097BF1D /* YDRegexTool.m in Sources */,
 				4298A6131EEA50020097BF1D /* YDNetServerManager.m in Sources */,
 				42CCB47E1EF23C2A00995C0B /* DOUAudioStreamer+Options.m in Sources */,

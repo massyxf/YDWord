@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #define YDNoteCellIdentifier @"YDNoteCellIdentifier"
 
+@class YDNoteModel;
+
 @interface YDNoteCell : UITableViewCell
 
+/*model*/
+@property (nonatomic,strong)YDNoteModel *noteModel;
+
 @end
+

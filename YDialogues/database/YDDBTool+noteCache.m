@@ -28,15 +28,13 @@
     return [tool createTable:sql];
 }
 
--(void)saveNote:(YDNoteModel *)note{
+-(BOOL)saveNote:(YDNoteModel *)note{
     FMDatabase *db = self.fmdb;
-    if ([db open]) {
-        BOOL success = [db executeUpdate:@"INSERT INTO note_table(title,date,dateId,uniqId) values (?,?,?,?);",note.title,note.date,note.dateId,note.uniqId];
-        if (!success) {
-            NSLog(@"save note error:%@",note);
-        }
-        [db close];
+    BOOL success = [db executeUpdate:@"INSERT INTO note_table(title,date,dateId,uniqId) values (?,?,?,?);" values:@[note.title,note.date,@(note.dateId),@(note.uniqId)] error:nil];
+    if (!success) {
+        NSLog(@"save note error:%@",note);
     }
+    return success;
 }
 
 -(NSArray<YDNoteModel *> *)selectNotes{

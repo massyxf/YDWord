@@ -7,11 +7,15 @@
 //
 
 #import "YDEditNoteViewController.h"
-#import "YDAddDialogueViewController.h"
 #import "YDEditNoteFootView.h"
 #import "YDEditNoteHeadView.h"
 #import "YDWordCell.h"
 #import "YDNoteWordModel.h"
+#import "YDNoteModel.h"
+#import "YDDBTool+wordCache.h"
+#import "YDDBTool+noteCache.h"
+#import <FMDB/FMDB.h>
+#import "YDTimeTool.h"
 
 @interface YDEditNoteViewController ()<UITableViewDelegate,UITableViewDataSource,YDEditNoteFootViewDelegate>
 
@@ -59,9 +63,31 @@
 #pragma mark - action
 -(IBAction)addWord:(id)sender
 {
-    YDAddDialogueViewController *addVc = [[YDAddDialogueViewController alloc] init];
-    UINavigationController *naviVc = [[UINavigationController alloc] initWithRootViewController:addVc];
-    [self.navigationController presentViewController:naviVc animated:YES completion:nil];
+    YDDBTool *tool = [YDDBTool shareInstance];
+    
+    if ([tool.fmdb open]) {
+        [tool.fmdb beginTransaction];
+        
+        YDNoteModel *model = [[YDNoteModel alloc] init];
+        YDNoteWordModel *wordModel = self.wordsArray.firstObject;
+        model.title = wordModel.title;
+        model.date = [YDTimeTool dateFormateWithTimeams:wordModel.dateId formate:@"yyyy-MM-dd HH:mm"];
+        model.dateId = wordModel.dateId;
+        model.uniqId = wordModel.uniqId;
+        if (![tool saveNote:model]) {
+            [tool.fmdb rollback];
+            return;
+        }
+        if (![tool saveWords:self.wordsArray inNote:model]) {
+            [tool.fmdb rollback];
+            return;
+        }
+        [tool.fmdb commit];
+        [tool.fmdb close];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }
+    
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
