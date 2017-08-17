@@ -8,7 +8,6 @@
 
 #import "YDNetServerManager.h"
 #import <AFNetworking/AFNetworking.h>
-#import "YDJSCBWordModel.h"
 #import "YDRegexTool.h"
 #import "YDDBTool.h"
 
@@ -73,25 +72,6 @@
     NSDictionary *dict = @{@"w":utf8Word,
                            @"key":@"6BC5B9A2836DEB79B11BF4234E06E840",
                            @"type":@"json"};
-    [self postUrl:jinshancibaUrl
-           params:dict
-         progress:nil
-          success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable result) {
-              YDJSCBWordModel *wordModel = nil;
-              if (result[@"word_name"]) {
-                  if (isCnWord) {
-                      wordModel = [[YDCnWordModel alloc] initWithDictionary:result
-                                                                      error:nil];
-                      [YDDBTool saveCnWord:(YDCnWordModel *)wordModel];
-                  }else{
-                      wordModel = [[YDEnWordModel alloc] initWithDictionary:result error:nil];
-                      [YDDBTool saveEnWord:(YDEnWordModel *)wordModel];
-                  }
-              }
-              success(wordModel);
-          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-              fail(error);
-          }];
 }
 
 

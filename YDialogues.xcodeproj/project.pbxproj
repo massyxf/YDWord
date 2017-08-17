@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A68741EF2BF6E00326466 /* YDTransWordView.m */; };
+		425969291F453AB900C1A817 /* YDNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969281F453AB900C1A817 /* YDNoteModel.m */; };
+		4259692C1F45416300C1A817 /* YDEditNoteFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259692B1F45416300C1A817 /* YDEditNoteFootView.m */; };
+		4259692F1F4549CB00C1A817 /* YDNoteWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259692E1F4549CB00C1A817 /* YDNoteWordModel.m */; };
+		425969321F454A7A00C1A817 /* YDCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969311F454A7A00C1A817 /* YDCommonModel.m */; };
+		425969351F4569A500C1A817 /* YDWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969341F4569A500C1A817 /* YDWordCell.m */; };
+		425969391F4579FE00C1A817 /* YDRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969381F4579FE00C1A817 /* YDRadiusView.m */; };
+		4259693F1F4585F000C1A817 /* YDEditNoteHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259693E1F4585F000C1A817 /* YDEditNoteHeadView.m */; };
+		425969421F458EC600C1A817 /* YDDBTool+wordCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969411F458EC600C1A817 /* YDDBTool+wordCache.m */; };
+		425969451F458ED300C1A817 /* YDDBTool+noteCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969441F458ED300C1A817 /* YDDBTool+noteCache.m */; };
+		425969481F458F6400C1A817 /* YDDBTool+transCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969471F458F6400C1A817 /* YDDBTool+transCache.m */; };
 		428BD5941EE8E19800463C1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5931EE8E19800463C1E /* main.m */; };
 		428BD5971EE8E19800463C1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5961EE8E19800463C1E /* AppDelegate.m */; };
 		428BD59A1EE8E19800463C1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5991EE8E19800463C1E /* ViewController.m */; };
@@ -28,11 +38,6 @@
 		428BD5F21EE9501B00463C1E /* YDAddDialogueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5F11EE9501B00463C1E /* YDAddDialogueViewController.m */; };
 		4298A6131EEA50020097BF1D /* YDNetServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A6121EEA50020097BF1D /* YDNetServerManager.m */; };
 		4298A6231EEA7BB60097BF1D /* YDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A6221EEA7BB60097BF1D /* YDBaseModel.m */; };
-		4298A6321EEA801D0097BF1D /* YDExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A62B1EEA801D0097BF1D /* YDExchange.m */; };
-		4298A6331EEA801D0097BF1D /* YDJSCBWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A62D1EEA801D0097BF1D /* YDJSCBWordModel.m */; };
-		4298A6341EEA801D0097BF1D /* YDPartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A62F1EEA801D0097BF1D /* YDPartModel.m */; };
-		4298A6351EEA801D0097BF1D /* YDSymbolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A6311EEA801D0097BF1D /* YDSymbolModel.m */; };
-		4298A6381EEA90B20097BF1D /* YDCnMeanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A6371EEA90B20097BF1D /* YDCnMeanModel.m */; };
 		4298A63C1EEA961A0097BF1D /* YDRegexTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A63B1EEA961A0097BF1D /* YDRegexTool.m */; };
 		4298A63F1EEA9F690097BF1D /* YDEditNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A63E1EEA9F690097BF1D /* YDEditNoteViewController.m */; };
 		42CCB4731EF23C2A00995C0B /* DOUAudioAnalyzer+Default.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB44C1EF23C2900995C0B /* DOUAudioAnalyzer+Default.m */; };
@@ -78,6 +83,26 @@
 		339735FA8DAFA5E4C483A4C5 /* Pods-YDialogues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDialogues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDialogues/Pods-YDialogues.debug.xcconfig"; sourceTree = "<group>"; };
 		422A68731EF2BF6E00326466 /* YDTransWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransWordView.h; sourceTree = "<group>"; };
 		422A68741EF2BF6E00326466 /* YDTransWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTransWordView.m; sourceTree = "<group>"; };
+		425969271F453AB900C1A817 /* YDNoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDNoteModel.h; sourceTree = "<group>"; };
+		425969281F453AB900C1A817 /* YDNoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDNoteModel.m; sourceTree = "<group>"; };
+		4259692A1F45416200C1A817 /* YDEditNoteFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDEditNoteFootView.h; sourceTree = "<group>"; };
+		4259692B1F45416300C1A817 /* YDEditNoteFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDEditNoteFootView.m; sourceTree = "<group>"; };
+		4259692D1F4549CB00C1A817 /* YDNoteWordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDNoteWordModel.h; sourceTree = "<group>"; };
+		4259692E1F4549CB00C1A817 /* YDNoteWordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDNoteWordModel.m; sourceTree = "<group>"; };
+		425969301F454A7A00C1A817 /* YDCommonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDCommonModel.h; sourceTree = "<group>"; };
+		425969311F454A7A00C1A817 /* YDCommonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDCommonModel.m; sourceTree = "<group>"; };
+		425969331F4569A500C1A817 /* YDWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDWordCell.h; sourceTree = "<group>"; };
+		425969341F4569A500C1A817 /* YDWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDWordCell.m; sourceTree = "<group>"; };
+		425969371F4579FE00C1A817 /* YDRadiusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDRadiusView.h; sourceTree = "<group>"; };
+		425969381F4579FE00C1A817 /* YDRadiusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDRadiusView.m; sourceTree = "<group>"; };
+		4259693D1F4585F000C1A817 /* YDEditNoteHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDEditNoteHeadView.h; sourceTree = "<group>"; };
+		4259693E1F4585F000C1A817 /* YDEditNoteHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDEditNoteHeadView.m; sourceTree = "<group>"; };
+		425969401F458EC600C1A817 /* YDDBTool+wordCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YDDBTool+wordCache.h"; sourceTree = "<group>"; };
+		425969411F458EC600C1A817 /* YDDBTool+wordCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YDDBTool+wordCache.m"; sourceTree = "<group>"; };
+		425969431F458ED300C1A817 /* YDDBTool+noteCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YDDBTool+noteCache.h"; sourceTree = "<group>"; };
+		425969441F458ED300C1A817 /* YDDBTool+noteCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YDDBTool+noteCache.m"; sourceTree = "<group>"; };
+		425969461F458F6400C1A817 /* YDDBTool+transCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YDDBTool+transCache.h"; sourceTree = "<group>"; };
+		425969471F458F6400C1A817 /* YDDBTool+transCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YDDBTool+transCache.m"; sourceTree = "<group>"; };
 		428BD58F1EE8E19800463C1E /* YDialogues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDialogues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428BD5931EE8E19800463C1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		428BD5951EE8E19800463C1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,16 +144,6 @@
 		4298A6121EEA50020097BF1D /* YDNetServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDNetServerManager.m; sourceTree = "<group>"; };
 		4298A6211EEA7BB60097BF1D /* YDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBaseModel.h; sourceTree = "<group>"; };
 		4298A6221EEA7BB60097BF1D /* YDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBaseModel.m; sourceTree = "<group>"; };
-		4298A62A1EEA801D0097BF1D /* YDExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDExchange.h; sourceTree = "<group>"; };
-		4298A62B1EEA801D0097BF1D /* YDExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDExchange.m; sourceTree = "<group>"; };
-		4298A62C1EEA801D0097BF1D /* YDJSCBWordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDJSCBWordModel.h; sourceTree = "<group>"; };
-		4298A62D1EEA801D0097BF1D /* YDJSCBWordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDJSCBWordModel.m; sourceTree = "<group>"; };
-		4298A62E1EEA801D0097BF1D /* YDPartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDPartModel.h; sourceTree = "<group>"; };
-		4298A62F1EEA801D0097BF1D /* YDPartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDPartModel.m; sourceTree = "<group>"; };
-		4298A6301EEA801D0097BF1D /* YDSymbolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSymbolModel.h; sourceTree = "<group>"; };
-		4298A6311EEA801D0097BF1D /* YDSymbolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSymbolModel.m; sourceTree = "<group>"; };
-		4298A6361EEA90B20097BF1D /* YDCnMeanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDCnMeanModel.h; sourceTree = "<group>"; };
-		4298A6371EEA90B20097BF1D /* YDCnMeanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDCnMeanModel.m; sourceTree = "<group>"; };
 		4298A63A1EEA961A0097BF1D /* YDRegexTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDRegexTool.h; sourceTree = "<group>"; };
 		4298A63B1EEA961A0097BF1D /* YDRegexTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDRegexTool.m; sourceTree = "<group>"; };
 		4298A63D1EEA9F690097BF1D /* YDEditNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDEditNoteViewController.h; sourceTree = "<group>"; };
@@ -214,6 +229,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		425969361F4579E500C1A817 /* custom view */ = {
+			isa = PBXGroup;
+			children = (
+				425969371F4579FE00C1A817 /* YDRadiusView.h */,
+				425969381F4579FE00C1A817 /* YDRadiusView.m */,
+			);
+			path = "custom view";
+			sourceTree = "<group>";
+		};
 		428BD5861EE8E19800463C1E = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +263,7 @@
 		428BD5911EE8E19800463C1E /* YDialogues */ = {
 			isa = PBXGroup;
 			children = (
+				425969361F4579E500C1A817 /* custom view */,
 				4298A6391EEA96010097BF1D /* tool */,
 				4298A6141EEA53FF0097BF1D /* commonModel */,
 				428BD5E01EE922FE00463C1E /* translation */,
@@ -293,6 +318,12 @@
 			children = (
 				428BD5D71EE8EB7E00463C1E /* YDDBTool.h */,
 				428BD5D81EE8EB7E00463C1E /* YDDBTool.m */,
+				425969431F458ED300C1A817 /* YDDBTool+noteCache.h */,
+				425969441F458ED300C1A817 /* YDDBTool+noteCache.m */,
+				425969401F458EC600C1A817 /* YDDBTool+wordCache.h */,
+				425969411F458EC600C1A817 /* YDDBTool+wordCache.m */,
+				425969461F458F6400C1A817 /* YDDBTool+transCache.h */,
+				425969471F458F6400C1A817 /* YDDBTool+transCache.m */,
 			);
 			path = database;
 			sourceTree = "<group>";
@@ -356,6 +387,10 @@
 		428BD5CC1EE8E28900463C1E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				425969271F453AB900C1A817 /* YDNoteModel.h */,
+				425969281F453AB900C1A817 /* YDNoteModel.m */,
+				4259692D1F4549CB00C1A817 /* YDNoteWordModel.h */,
+				4259692E1F4549CB00C1A817 /* YDNoteWordModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -365,6 +400,12 @@
 			children = (
 				428BD5EA1EE924F600463C1E /* YDNoteCell.h */,
 				428BD5EB1EE924F600463C1E /* YDNoteCell.m */,
+				4259692A1F45416200C1A817 /* YDEditNoteFootView.h */,
+				4259692B1F45416300C1A817 /* YDEditNoteFootView.m */,
+				4259693D1F4585F000C1A817 /* YDEditNoteHeadView.h */,
+				4259693E1F4585F000C1A817 /* YDEditNoteHeadView.m */,
+				425969331F4569A500C1A817 /* YDWordCell.h */,
+				425969341F4569A500C1A817 /* YDWordCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -415,16 +456,6 @@
 		428BD5E21EE922FE00463C1E /* model */ = {
 			isa = PBXGroup;
 			children = (
-				4298A62A1EEA801D0097BF1D /* YDExchange.h */,
-				4298A62B1EEA801D0097BF1D /* YDExchange.m */,
-				4298A62C1EEA801D0097BF1D /* YDJSCBWordModel.h */,
-				4298A62D1EEA801D0097BF1D /* YDJSCBWordModel.m */,
-				4298A6301EEA801D0097BF1D /* YDSymbolModel.h */,
-				4298A6311EEA801D0097BF1D /* YDSymbolModel.m */,
-				4298A62E1EEA801D0097BF1D /* YDPartModel.h */,
-				4298A62F1EEA801D0097BF1D /* YDPartModel.m */,
-				4298A6361EEA90B20097BF1D /* YDCnMeanModel.h */,
-				4298A6371EEA90B20097BF1D /* YDCnMeanModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -443,6 +474,8 @@
 			children = (
 				4298A6211EEA7BB60097BF1D /* YDBaseModel.h */,
 				4298A6221EEA7BB60097BF1D /* YDBaseModel.m */,
+				425969301F454A7A00C1A817 /* YDCommonModel.h */,
+				425969311F454A7A00C1A817 /* YDCommonModel.m */,
 			);
 			path = commonModel;
 			sourceTree = "<group>";
@@ -592,8 +625,8 @@
 				TargetAttributes = {
 					428BD58E1EE8E19800463C1E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = FLV4GVU8JK;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = HDBTF9879K;
+						ProvisioningStyle = Manual;
 					};
 					428BD5A71EE8E19B00463C1E = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -717,38 +750,43 @@
 				42CCB4801EF23C2A00995C0B /* DOUAudioVisualizer.m in Sources */,
 				4298A6231EEA7BB60097BF1D /* YDBaseModel.m in Sources */,
 				428BD59A1EE8E19800463C1E /* ViewController.m in Sources */,
+				425969351F4569A500C1A817 /* YDWordCell.m in Sources */,
 				428BD5E61EE9232300463C1E /* YDTranslationViewController.m in Sources */,
-				4298A6341EEA801D0097BF1D /* YDPartModel.m in Sources */,
 				42CCB4781EF23C2A00995C0B /* DOUAudioFileProvider.m in Sources */,
 				42CCB4811EF23C2A00995C0B /* DOUEAGLView.m in Sources */,
 				428BD5971EE8E19800463C1E /* AppDelegate.m in Sources */,
 				428BD5D91EE8EB7E00463C1E /* YDDBTool.m in Sources */,
-				4298A6321EEA801D0097BF1D /* YDExchange.m in Sources */,
+				425969481F458F6400C1A817 /* YDDBTool+transCache.m in Sources */,
 				42CCB47F1EF23C2A00995C0B /* DOUAudioStreamer.m in Sources */,
 				422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */,
 				42CCB4771EF23C2A00995C0B /* DOUAudioFilePreprocessor.m in Sources */,
+				425969421F458EC600C1A817 /* YDDBTool+wordCache.m in Sources */,
 				428BD5D51EE8E53A00463C1E /* NSError+Custom.m in Sources */,
 				42CCB4751EF23C2A00995C0B /* DOUAudioDecoder.m in Sources */,
 				42CCB47A1EF23C2A00995C0B /* DOUAudioLPCM.m in Sources */,
 				428BD5E91EE923A400463C1E /* YDNoteViewController.m in Sources */,
-				4298A6351EEA801D0097BF1D /* YDSymbolModel.m in Sources */,
 				42CCB48A1EF262A700995C0B /* NSString+YDHandle.m in Sources */,
 				428BD5D11EE8E2BF00463C1E /* YXFPayTool.m in Sources */,
+				4259692F1F4549CB00C1A817 /* YDNoteWordModel.m in Sources */,
 				42CCB47D1EF23C2A00995C0B /* DOUAudioSpatialAnalyzer.m in Sources */,
+				425969391F4579FE00C1A817 /* YDRadiusView.m in Sources */,
 				42CCB47B1EF23C2A00995C0B /* DOUAudioPlaybackItem.m in Sources */,
 				42CCB4791EF23C2A00995C0B /* DOUAudioFrequencyAnalyzer.m in Sources */,
+				425969321F454A7A00C1A817 /* YDCommonModel.m in Sources */,
 				42CCB4821EF23C2A00995C0B /* DOUMPMediaLibraryAssetLoader.m in Sources */,
 				428BD5941EE8E19800463C1E /* main.m in Sources */,
 				42CCB4831EF23C2A00995C0B /* DOUSimpleHTTPRequest.m in Sources */,
-				4298A6381EEA90B20097BF1D /* YDCnMeanModel.m in Sources */,
+				425969451F458ED300C1A817 /* YDDBTool+noteCache.m in Sources */,
 				428BD5DC1EE8EC5700463C1E /* NSString+FilePath.m in Sources */,
 				428BD5EF1EE9295B00463C1E /* UILabel+Normal.m in Sources */,
 				428BD5EC1EE924F600463C1E /* YDNoteCell.m in Sources */,
+				4259692C1F45416300C1A817 /* YDEditNoteFootView.m in Sources */,
 				428BD5DF1EE8EFE200463C1E /* YDGameViewController.m in Sources */,
 				42CCB4761EF23C2A00995C0B /* DOUAudioEventLoop.m in Sources */,
 				42CCB47C1EF23C2A00995C0B /* DOUAudioRenderer.m in Sources */,
+				4259693F1F4585F000C1A817 /* YDEditNoteHeadView.m in Sources */,
 				42CCB4841EF23C2A00995C0B /* NSData+DOUMappedFile.m in Sources */,
-				4298A6331EEA801D0097BF1D /* YDJSCBWordModel.m in Sources */,
+				425969291F453AB900C1A817 /* YDNoteModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,13 +936,15 @@
 			baseConfigurationReference = 339735FA8DAFA5E4C483A4C5 /* Pods-YDialogues.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FLV4GVU8JK;
+				DEVELOPMENT_TEAM = HDBTF9879K;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YDialogues/YDialogue.pch";
 				INFOPLIST_FILE = YDialogues/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yxf;
+				PRODUCT_BUNDLE_IDENTIFIER = con.yxf.wordbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3cd5a554-beff-424b-a207-e737965ebd07";
+				PROVISIONING_PROFILE_SPECIFIER = yxf;
 			};
 			name = Debug;
 		};
@@ -913,13 +953,14 @@
 			baseConfigurationReference = 5E3A8FAAD343549318C736D5 /* Pods-YDialogues.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FLV4GVU8JK;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YDialogues/YDialogue.pch";
 				INFOPLIST_FILE = YDialogues/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yxf;
+				PRODUCT_BUNDLE_IDENTIFIER = con.yxf.wordbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

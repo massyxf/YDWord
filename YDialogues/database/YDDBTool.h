@@ -8,15 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
-@class YDEnWordModel;
-@class YDCnWordModel;
+@class FMDatabase;
+@class YDNoteWordModel;
+@class YDNoteModel;
+
+@protocol YDDBToolDelegate <NSObject>
+
+-(void)dbInitialFailed;
+
+@end
 
 @interface YDDBTool : NSObject
 
+/** db*/
+@property(nonatomic,strong,readonly)FMDatabase *fmdb;
+
+/** delegate*/
+@property(nonatomic,weak)id<YDDBToolDelegate> delegate;
+
 +(instancetype)shareInstance;
 
-+(void)saveEnWord:(YDEnWordModel *)word;
++(void)dbInitial;
 
-+(void)saveCnWord:(YDCnWordModel *)word;
+-(BOOL)tableExitDatas:(NSString *)tableName;
+
+-(BOOL)createTable:(NSString *)tabeleDes;
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "YDDBTool.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<YDDBToolDelegate>
 
 @end
 
@@ -16,7 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [YDDBTool shareInstance].delegate = self;
+    [YDDBTool dbInitial];
     return YES;
 }
 
@@ -47,5 +49,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+#pragma mark - YDDBToolDelegate
+-(void)dbInitialFailed{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"数据库初始化错误"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles: nil];
+    [alertView show];
+}
 
 @end
