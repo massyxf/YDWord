@@ -59,6 +59,13 @@
 		42CCB4831EF23C2A00995C0B /* DOUSimpleHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4701EF23C2900995C0B /* DOUSimpleHTTPRequest.m */; };
 		42CCB4841EF23C2A00995C0B /* NSData+DOUMappedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4721EF23C2900995C0B /* NSData+DOUMappedFile.m */; };
 		42CCB48A1EF262A700995C0B /* NSString+YDHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4891EF262A700995C0B /* NSString+YDHandle.m */; };
+		42D70AC41F4680FB00DF02AB /* YDTransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AC31F4680FB00DF02AB /* YDTransViewController.m */; };
+		42D70AC71F46841F00DF02AB /* YDYinghanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AC61F46841F00DF02AB /* YDYinghanViewController.m */; };
+		42D70ACA1F46842C00DF02AB /* YDXinhuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AC91F46842C00DF02AB /* YDXinhuaViewController.m */; };
+		42D70ACD1F46843A00DF02AB /* YDChengyuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70ACC1F46843A00DF02AB /* YDChengyuViewController.m */; };
+		42D70AD21F46BA1900DF02AB /* YDYoudaoTransTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AD11F46BA1900DF02AB /* YDYoudaoTransTool.m */; };
+		42D70AF51F46D54400DF02AB /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AF41F46D54400DF02AB /* NSString+Hashes.m */; };
+		42D70AF81F46E04F00DF02AB /* YDYoudaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AF71F46E04F00DF02AB /* YDYoudaoModel.m */; };
 		42D756401F45BECA0025B7D6 /* YDTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */; };
 		4C999AD4587F3DB61D4D85F9 /* libPods-YDialogues.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D89C3DC092C00F9C2F034C9 /* libPods-YDialogues.a */; };
 /* End PBXBuildFile section */
@@ -191,6 +198,27 @@
 		42CCB4721EF23C2900995C0B /* NSData+DOUMappedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DOUMappedFile.m"; sourceTree = "<group>"; };
 		42CCB4881EF262A700995C0B /* NSString+YDHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YDHandle.h"; sourceTree = "<group>"; };
 		42CCB4891EF262A700995C0B /* NSString+YDHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YDHandle.m"; sourceTree = "<group>"; };
+		42D70AC21F4680FB00DF02AB /* YDTransViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransViewController.h; sourceTree = "<group>"; };
+		42D70AC31F4680FB00DF02AB /* YDTransViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTransViewController.m; sourceTree = "<group>"; };
+		42D70AC51F46841F00DF02AB /* YDYinghanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDYinghanViewController.h; sourceTree = "<group>"; };
+		42D70AC61F46841F00DF02AB /* YDYinghanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDYinghanViewController.m; sourceTree = "<group>"; };
+		42D70AC81F46842C00DF02AB /* YDXinhuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDXinhuaViewController.h; sourceTree = "<group>"; };
+		42D70AC91F46842C00DF02AB /* YDXinhuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDXinhuaViewController.m; sourceTree = "<group>"; };
+		42D70ACB1F46843A00DF02AB /* YDChengyuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDChengyuViewController.h; sourceTree = "<group>"; };
+		42D70ACC1F46843A00DF02AB /* YDChengyuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDChengyuViewController.m; sourceTree = "<group>"; };
+		42D70ACE1F468C1B00DF02AB /* YDTransSubVcProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransSubVcProtocol.h; sourceTree = "<group>"; };
+		42D70AD01F46BA1900DF02AB /* YDYoudaoTransTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDYoudaoTransTool.h; sourceTree = "<group>"; };
+		42D70AD11F46BA1900DF02AB /* YDYoudaoTransTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDYoudaoTransTool.m; sourceTree = "<group>"; };
+		42D70AE71F46BF2B00DF02AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		42D70AE91F46BF3B00DF02AB /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		42D70AEB1F46BF4900DF02AB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		42D70AED1F46BF5100DF02AB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		42D70AEF1F46BF5C00DF02AB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		42D70AF11F46BF6400DF02AB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		42D70AF31F46D54400DF02AB /* NSString+Hashes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashes.h"; sourceTree = "<group>"; };
+		42D70AF41F46D54400DF02AB /* NSString+Hashes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
+		42D70AF61F46E04F00DF02AB /* YDYoudaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDYoudaoModel.h; sourceTree = "<group>"; };
+		42D70AF71F46E04F00DF02AB /* YDYoudaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDYoudaoModel.m; sourceTree = "<group>"; };
 		42D7563E1F45BECA0025B7D6 /* YDTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTimeTool.h; sourceTree = "<group>"; };
 		42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTimeTool.m; sourceTree = "<group>"; };
 		5E3A8FAAD343549318C736D5 /* Pods-YDialogues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDialogues.release.xcconfig"; path = "Pods/Target Support Files/Pods-YDialogues/Pods-YDialogues.release.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +294,7 @@
 		428BD5911EE8E19800463C1E /* YDialogues */ = {
 			isa = PBXGroup;
 			children = (
+				42D70AD31F46BDAD00DF02AB /* lib */,
 				425969361F4579E500C1A817 /* custom view */,
 				4298A6391EEA96010097BF1D /* tool */,
 				4298A6141EEA53FF0097BF1D /* commonModel */,
@@ -425,6 +454,8 @@
 		428BD5D21EE8E50C00463C1E /* category */ = {
 			isa = PBXGroup;
 			children = (
+				42D70AF31F46D54400DF02AB /* NSString+Hashes.h */,
+				42D70AF41F46D54400DF02AB /* NSString+Hashes.m */,
 				428BD5D31EE8E53A00463C1E /* NSError+Custom.h */,
 				428BD5D41EE8E53A00463C1E /* NSError+Custom.m */,
 				428BD5DA1EE8EC5700463C1E /* NSString+FilePath.h */,
@@ -452,6 +483,15 @@
 			children = (
 				428BD5E41EE9232300463C1E /* YDTranslationViewController.h */,
 				428BD5E51EE9232300463C1E /* YDTranslationViewController.m */,
+				42D70AC21F4680FB00DF02AB /* YDTransViewController.h */,
+				42D70AC31F4680FB00DF02AB /* YDTransViewController.m */,
+				42D70AC51F46841F00DF02AB /* YDYinghanViewController.h */,
+				42D70AC61F46841F00DF02AB /* YDYinghanViewController.m */,
+				42D70AC81F46842C00DF02AB /* YDXinhuaViewController.h */,
+				42D70AC91F46842C00DF02AB /* YDXinhuaViewController.m */,
+				42D70ACB1F46843A00DF02AB /* YDChengyuViewController.h */,
+				42D70ACC1F46843A00DF02AB /* YDChengyuViewController.m */,
+				42D70ACE1F468C1B00DF02AB /* YDTransSubVcProtocol.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -459,6 +499,8 @@
 		428BD5E21EE922FE00463C1E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				42D70AF61F46E04F00DF02AB /* YDYoudaoModel.h */,
+				42D70AF71F46E04F00DF02AB /* YDYoudaoModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -486,6 +528,7 @@
 		4298A6391EEA96010097BF1D /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				42D70ACF1F46B9F800DF02AB /* translation */,
 				4298A63A1EEA961A0097BF1D /* YDRegexTool.h */,
 				4298A63B1EEA961A0097BF1D /* YDRegexTool.m */,
 				42D7563E1F45BECA0025B7D6 /* YDTimeTool.h */,
@@ -542,9 +585,31 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		42D70ACF1F46B9F800DF02AB /* translation */ = {
+			isa = PBXGroup;
+			children = (
+				42D70AD01F46BA1900DF02AB /* YDYoudaoTransTool.h */,
+				42D70AD11F46BA1900DF02AB /* YDYoudaoTransTool.m */,
+			);
+			path = translation;
+			sourceTree = "<group>";
+		};
+		42D70AD31F46BDAD00DF02AB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		BBDE8A9D656650C8195B6899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42D70AF11F46BF6400DF02AB /* libsqlite3.tbd */,
+				42D70AEF1F46BF5C00DF02AB /* libz.tbd */,
+				42D70AED1F46BF5100DF02AB /* SystemConfiguration.framework */,
+				42D70AEB1F46BF4900DF02AB /* CoreTelephony.framework */,
+				42D70AE91F46BF3B00DF02AB /* libstdc++.6.0.9.tbd */,
+				42D70AE71F46BF2B00DF02AB /* AdSupport.framework */,
 				8D89C3DC092C00F9C2F034C9 /* libPods-YDialogues.a */,
 			);
 			name = Frameworks;
@@ -746,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428BD5F21EE9501B00463C1E /* YDAddDialogueViewController.m in Sources */,
+				42D70AF81F46E04F00DF02AB /* YDYoudaoModel.m in Sources */,
 				42D756401F45BECA0025B7D6 /* YDTimeTool.m in Sources */,
 				4298A63C1EEA961A0097BF1D /* YDRegexTool.m in Sources */,
 				4298A6131EEA50020097BF1D /* YDNetServerManager.m in Sources */,
@@ -754,17 +820,21 @@
 				4298A63F1EEA9F690097BF1D /* YDEditNoteViewController.m in Sources */,
 				42CCB4741EF23C2A00995C0B /* DOUAudioAnalyzer.m in Sources */,
 				42CCB4801EF23C2A00995C0B /* DOUAudioVisualizer.m in Sources */,
+				42D70ACA1F46842C00DF02AB /* YDXinhuaViewController.m in Sources */,
 				4298A6231EEA7BB60097BF1D /* YDBaseModel.m in Sources */,
 				428BD59A1EE8E19800463C1E /* ViewController.m in Sources */,
 				425969351F4569A500C1A817 /* YDWordCell.m in Sources */,
 				428BD5E61EE9232300463C1E /* YDTranslationViewController.m in Sources */,
 				42CCB4781EF23C2A00995C0B /* DOUAudioFileProvider.m in Sources */,
+				42D70AD21F46BA1900DF02AB /* YDYoudaoTransTool.m in Sources */,
 				42CCB4811EF23C2A00995C0B /* DOUEAGLView.m in Sources */,
 				428BD5971EE8E19800463C1E /* AppDelegate.m in Sources */,
+				42D70AC71F46841F00DF02AB /* YDYinghanViewController.m in Sources */,
 				428BD5D91EE8EB7E00463C1E /* YDDBTool.m in Sources */,
 				425969481F458F6400C1A817 /* YDDBTool+transCache.m in Sources */,
 				42CCB47F1EF23C2A00995C0B /* DOUAudioStreamer.m in Sources */,
 				422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */,
+				42D70AF51F46D54400DF02AB /* NSString+Hashes.m in Sources */,
 				42CCB4771EF23C2A00995C0B /* DOUAudioFilePreprocessor.m in Sources */,
 				425969421F458EC600C1A817 /* YDDBTool+wordCache.m in Sources */,
 				428BD5D51EE8E53A00463C1E /* NSError+Custom.m in Sources */,
@@ -778,6 +848,7 @@
 				425969391F4579FE00C1A817 /* YDRadiusView.m in Sources */,
 				42CCB47B1EF23C2A00995C0B /* DOUAudioPlaybackItem.m in Sources */,
 				42CCB4791EF23C2A00995C0B /* DOUAudioFrequencyAnalyzer.m in Sources */,
+				42D70ACD1F46843A00DF02AB /* YDChengyuViewController.m in Sources */,
 				425969321F454A7A00C1A817 /* YDCommonModel.m in Sources */,
 				42CCB4821EF23C2A00995C0B /* DOUMPMediaLibraryAssetLoader.m in Sources */,
 				428BD5941EE8E19800463C1E /* main.m in Sources */,
@@ -785,6 +856,7 @@
 				425969451F458ED300C1A817 /* YDDBTool+noteCache.m in Sources */,
 				428BD5DC1EE8EC5700463C1E /* NSString+FilePath.m in Sources */,
 				428BD5EF1EE9295B00463C1E /* UILabel+Normal.m in Sources */,
+				42D70AC41F4680FB00DF02AB /* YDTransViewController.m in Sources */,
 				428BD5EC1EE924F600463C1E /* YDNoteCell.m in Sources */,
 				4259692C1F45416300C1A817 /* YDEditNoteFootView.m in Sources */,
 				428BD5DF1EE8EFE200463C1E /* YDGameViewController.m in Sources */,
@@ -947,10 +1019,15 @@
 				INFOPLIST_FILE = YDialogues/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = con.yxf.wordbook;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YDialogues/lib/youdao/ai-ocr-ios-sdk-v1",
+					"$(PROJECT_DIR)/YDialogues/lib/youdao/ai-translate-ios-sdk-v1",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yxf.pocketionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3cd5a554-beff-424b-a207-e737965ebd07";
-				PROVISIONING_PROFILE_SPECIFIER = yxf;
+				PROVISIONING_PROFILE = "bef5619b-e5fb-4009-a973-133718dee740";
+				PROVISIONING_PROFILE_SPECIFIER = pocketionary;
 			};
 			name = Debug;
 		};
@@ -964,7 +1041,12 @@
 				INFOPLIST_FILE = YDialogues/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = con.yxf.wordbook;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YDialogues/lib/youdao/ai-ocr-ios-sdk-v1",
+					"$(PROJECT_DIR)/YDialogues/lib/youdao/ai-translate-ios-sdk-v1",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yxf.pocketionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

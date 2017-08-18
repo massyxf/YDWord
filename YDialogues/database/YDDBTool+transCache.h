@@ -8,6 +8,12 @@
 
 #import "YDDBTool.h"
 
+@class YDYoudaoModel;
+
 @interface YDDBTool (transCache)
+
++(BOOL)initialTransTable;
+
++(BOOL)saveYoudaoModel:(YDYoudaoModel *)model;
 
 @end

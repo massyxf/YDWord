@@ -10,4 +10,11 @@
 
 @implementation YDCommonModel
 
+-(NSInteger)uniqId{
+    if (!_uniqId) {
+        _uniqId = (NSInteger)[[NSDate date] timeIntervalSince1970];
+    }
+    return _uniqId;
+}
+
 @end

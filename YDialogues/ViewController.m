@@ -29,7 +29,7 @@
     [subVcs addObject:noteVc];
     if (!noteSaved) {
         YDEditNoteViewController *editVc = [[YDEditNoteViewController alloc] init];
-        noteVc.navigationItem.hidesBackButton = YES;
+        editVc.navigationItem.hidesBackButton = YES;
         [noteVc pushViewController:editVc animated:NO];
     }
     
@@ -46,6 +46,7 @@
     if ([class isSubclassOfClass:[UIViewController class]]) {
         UIViewController *vc = [[class alloc] init];
         UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+        vc.navigationItem.title = title;
         navi.tabBarItem.title = title;
         return navi;
     }

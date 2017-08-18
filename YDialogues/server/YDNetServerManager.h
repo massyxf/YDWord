@@ -14,16 +14,8 @@ typedef void(^YDNetFail)(NSError *error);
 
 @interface YDNetServerManager : NSObject
 
-
-/**
- 获取翻译
-
- @param words 单词
- @param success 成功的回调
- @param fail 失败的回调
- */
-+(void)getWords:(NSString *)words
-        success:(YDNetSuccess)success
-           fail:(YDNetFail)fail;
++(void)transTextWithUrl:(NSString *)url
+                 params:(NSDictionary *)params
+             completion:(YDTransCompletion)completion;
 
 @end

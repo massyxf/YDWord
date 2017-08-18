@@ -7,13 +7,14 @@
 //
 
 #import "YDTranslationViewController.h"
-#import <Masonry/Masonry.h>
-#import "YDNetServerManager.h"
+#import "YDYinghanViewController.h"
+#import "YDXinhuaViewController.h"
+#import "YDChengyuViewController.h"
 
-@interface YDTranslationViewController ()<UITextFieldDelegate>
+@interface YDTranslationViewController ()<UIScrollViewDelegate>
 
-/*word*/
-@property (nonatomic,weak)UITextField *wordTextField;
+/** scroll*/
+@property(nonatomic,weak)UIScrollView *scrollView;
 
 @end
 
@@ -21,61 +22,92 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    searchBtn.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:searchBtn];
-    [searchBtn addTarget:self
-                  action:@selector(search:)
-        forControlEvents:UIControlEventTouchUpInside];
-
-    UITextField *textField = [[UITextField alloc] init];
-    [self.view addSubview:textField];
-    textField.returnKeyType = UIReturnKeyGo;
-    textField.delegate = self;
-    textField.backgroundColor = [UIColor orangeColor];
-    textField.autocorrectionType = UITextAutocorrectionTypeNo;
-    textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.wordTextField = textField;
-    
-    [searchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.mas_equalTo(50);
-        make.trailing.mas_equalTo(self.view).offset(-10);
-        make.top.mas_equalTo(self.view).offset(10 + YDNaviHeight);
+    CGFloat btnWidth = SCREENWIDTH / self.subVcs.count;
+    [self.subVcs enumerateObjectsUsingBlock:^(UIViewController<YDTransSubVcProtocol> * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self addChildViewController:obj];
+        UIButton *button = [self buttonWithTag:obj.bindBtnTag title:obj.bindBtnTitle frame:CGRectMake(btnWidth * idx, YDNaviHeight, btnWidth, 40) action:@selector(topBtnClicked:)];
+        [self.view addSubview:button];
     }];
     
-    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(searchBtn);
-        make.leading.mas_equalTo(self.view).offset(10);
-        make.trailing.equalTo(searchBtn.mas_leading).offset(-10);
-        make.height.mas_equalTo(30);
-    }];
+    CGFloat scroolY = YDNaviHeight + 40;
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, scroolY, SCREENWIDTH, SCREENHEIGHT - scroolY - 49)];
+    [self.view addSubview:scrollView];
+    scrollView.pagingEnabled = YES;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    _scrollView = scrollView;
+    scrollView.delegate = self;
     
-    
+    CGFloat width = CGRectGetWidth(self.view.bounds);
+    scrollView.contentSize = CGSizeMake(width * self.subVcs.count, 0);
+    [self scrollViewDidEndDecelerating:scrollView];
 }
 
--(IBAction)search:(id)sender{
-    [self translation];
+#pragma mark - getter
+-(NSArray<UIViewController *> *)subVcs{
+    if (!_subVcs) {
+        YDYinghanViewController *yinghanVc = [[YDYinghanViewController alloc] init];
+        YDXinhuaViewController *xinhuaVc = [[YDXinhuaViewController alloc] init];
+        YDChengyuViewController *chengyuVc = [[YDChengyuViewController alloc] init];
+        _subVcs = @[yinghanVc,xinhuaVc,chengyuVc];
+    }
+    return _subVcs;
 }
 
 #pragma mark - custom func
--(void)translation
-{
-    [YDNetServerManager getWords:self.wordTextField.text
-                         success:^(id obj) {
-                             NSLog(@"%@",obj);
-                         } fail:^(NSError *error) {
-                             NSLog(@"%@",error);
-                         }];
+-(UIButton *)buttonWithTag:(NSInteger)tag
+                     title:(NSString *)title
+                     frame:(CGRect)frame
+                    action:(SEL)action{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.tag = tag;
+    button.frame = frame;
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
+    return button;
 }
 
-#pragma mark - UITextFieldDelegate
--(BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    [self translation];
-    return YES;
+-(void)resetBtnState{
+    [self.subVcs enumerateObjectsUsingBlock:^(UIViewController<YDTransSubVcProtocol> * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIButton *subBtn = [self.view viewWithTag:obj.bindBtnTag];
+        subBtn.selected = NO;
+    }];
 }
 
+#pragma mark - action
+-(IBAction)topBtnClicked:(UIButton *)sender{
+    if (sender.isSelected) {
+        return;
+    }
+    
+    [self resetBtnState];
+    
+    sender.selected = YES;
+    NSInteger index = sender.tag - YDTransTag;
+    CGPoint offset = CGPointMake(index * SCREENWIDTH, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSInteger index = (scrollView.contentOffset.x + 10 ) / SCREENWIDTH;
+    if (!self.childViewControllers[index].viewLoaded) {
+        UIView *view = self.childViewControllers[index].view;
+        view.frame = CGRectMake(SCREENWIDTH * index, 0, SCREENWIDTH, CGRectGetHeight(scrollView.frame));
+        [scrollView addSubview:view];
+    }
+    [self resetBtnState];
+    UIButton *selectBtn = [self.view viewWithTag:YDTransTag + index];
+    selectBtn.selected = YES;
+}
+
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    [self scrollViewDidEndDecelerating:scrollView];
+}
 
 @end

@@ -51,27 +51,45 @@
        failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
     [[YDNetServerManager shareInstance].manager
-     GET:url
+     POST:url
      parameters:params
      progress:uploadProgress
      success:success
      failure:failure];
+//
+//    [[YDNetServerManager shareInstance].manager
+//     GET:url
+//     parameters:params
+//     progress:uploadProgress
+//     success:success
+//     failure:failure];
 }
 
 #pragma mark - public
 +(void)getWords:(NSString *)words success:(YDNetSuccess)success fail:(YDNetFail)fail
 {
-    NSString *jinshancibaUrl = @"http://dict-co.iciba.com/api/dictionary.php";
-    NSString *utf8Word = [NSString stringWithCString:words.UTF8String
-                                            encoding:NSUTF8StringEncoding];
-//    NSString *utf8Word = [words stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    //是否为中文单词
-    BOOL isCnWord = [YDRegexTool isCnWord:words];
-    
-    NSDictionary *dict = @{@"w":utf8Word,
-                           @"key":@"6BC5B9A2836DEB79B11BF4234E06E840",
-                           @"type":@"json"};
+//    NSString *jinshancibaUrl = @"http://dict-co.iciba.com/api/dictionary.php";
+//    NSString *utf8Word = [NSString stringWithCString:words.UTF8String
+//                                            encoding:NSUTF8StringEncoding];
+////    NSString *utf8Word = [words stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    
+//    //是否为中文单词
+//    BOOL isCnWord = [YDRegexTool isCnWord:words];
+//    
+//    NSDictionary *dict = @{@"w":utf8Word,
+//                           @"key":@"6BC5B9A2836DEB79B11BF4234E06E840",
+//                           @"type":@"json"};
+}
+
++(void)transTextWithUrl:(NSString *)url params:(NSDictionary *)params completion:(YDTransCompletion)completion{
+    [self postUrl:url
+           params:params
+         progress:nil
+          success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable result) {
+              completion(result,nil);
+          } failure:^(NSURLSessionDataTask * _Nullabletask, NSError * _Nonnull error) {
+              completion(nil,error);
+          }];
 }
 
 

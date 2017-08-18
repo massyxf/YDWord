@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YDTransSubVcProtocol.h"
 
 @interface YDTranslationViewController : UIViewController
+
+/** child vcs*/
+@property(nonatomic,strong)NSArray<UIViewController<YDTransSubVcProtocol> *> *subVcs;
 
 @end
