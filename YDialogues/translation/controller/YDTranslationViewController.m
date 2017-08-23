@@ -10,6 +10,7 @@
 #import "YDTransViewController.h"
 #import "YDV2TViewController.h"
 #import "YDOcrViewController.h"
+#import "YDV2TTool.h"
 
 @interface YDTranslationViewController ()<UIScrollViewDelegate>
 
@@ -43,6 +44,9 @@
     CGFloat width = CGRectGetWidth(self.view.bounds);
     scrollView.contentSize = CGSizeMake(width * self.subVcs.count, 0);
     [self scrollViewDidEndDecelerating:scrollView];
+    
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(startV2T:)];
 }
 
 #pragma mark - getter
@@ -90,6 +94,11 @@
     NSInteger index = sender.tag - YDTransTag;
     CGPoint offset = CGPointMake(index * SCREENWIDTH, 0);
     [self.scrollView setContentOffset:offset animated:YES];
+}
+
+
+-(IBAction)startV2T:(id)sender{
+    [[YDV2TTool shareInstance] start];
 }
 
 #pragma mark - UIScrollViewDelegate

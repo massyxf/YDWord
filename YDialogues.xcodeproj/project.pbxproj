@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421B84D41F4DB26C003FE9EE /* YDV2TManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D31F4DB26C003FE9EE /* YDV2TManager.m */; };
+		421B84D71F4DB27C003FE9EE /* YDV2TTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D61F4DB27C003FE9EE /* YDV2TTool.m */; };
+		421B84DA1F4DB28A003FE9EE /* YDT2VTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D91F4DB28A003FE9EE /* YDT2VTool.m */; };
 		422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A68741EF2BF6E00326466 /* YDTransWordView.m */; };
 		4232B5EE1F4ABC84002532BD /* YDTranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5E91F4ABC84002532BD /* YDTranslationViewController.m */; };
 		4232B5F21F4ABE2D002532BD /* YDOcrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5F11F4ABE2D002532BD /* YDOcrViewController.m */; };
 		4232B5F51F4ABFB6002532BD /* YDOcrTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5F41F4ABFB6002532BD /* YDOcrTool.m */; };
 		4232B5F81F4ABFE9002532BD /* YDYoudaoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5F71F4ABFE9002532BD /* YDYoudaoConfig.m */; };
-		4232B5FE1F4AC83A002532BD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4232B5FD1F4AC83A002532BD /* 1.png */; };
 		425969291F453AB900C1A817 /* YDNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969281F453AB900C1A817 /* YDNoteModel.m */; };
 		4259692C1F45416300C1A817 /* YDEditNoteFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259692B1F45416300C1A817 /* YDEditNoteFootView.m */; };
 		4259692F1F4549CB00C1A817 /* YDNoteWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259692E1F4549CB00C1A817 /* YDNoteWordModel.m */; };
@@ -76,6 +78,12 @@
 
 /* Begin PBXFileReference section */
 		339735FA8DAFA5E4C483A4C5 /* Pods-YDialogues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDialogues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDialogues/Pods-YDialogues.debug.xcconfig"; sourceTree = "<group>"; };
+		421B84D21F4DB26C003FE9EE /* YDV2TManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TManager.h; sourceTree = "<group>"; };
+		421B84D31F4DB26C003FE9EE /* YDV2TManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TManager.m; sourceTree = "<group>"; };
+		421B84D51F4DB27C003FE9EE /* YDV2TTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TTool.h; sourceTree = "<group>"; };
+		421B84D61F4DB27C003FE9EE /* YDV2TTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TTool.m; sourceTree = "<group>"; };
+		421B84D81F4DB28A003FE9EE /* YDT2VTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDT2VTool.h; sourceTree = "<group>"; };
+		421B84D91F4DB28A003FE9EE /* YDT2VTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDT2VTool.m; sourceTree = "<group>"; };
 		422A68731EF2BF6E00326466 /* YDTransWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransWordView.h; sourceTree = "<group>"; };
 		422A68741EF2BF6E00326466 /* YDTransWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTransWordView.m; sourceTree = "<group>"; };
 		4232B5E81F4ABC84002532BD /* YDTranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTranslationViewController.h; sourceTree = "<group>"; };
@@ -87,7 +95,6 @@
 		4232B5F41F4ABFB6002532BD /* YDOcrTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDOcrTool.m; sourceTree = "<group>"; };
 		4232B5F61F4ABFE9002532BD /* YDYoudaoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDYoudaoConfig.h; sourceTree = "<group>"; };
 		4232B5F71F4ABFE9002532BD /* YDYoudaoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDYoudaoConfig.m; sourceTree = "<group>"; };
-		4232B5FD1F4AC83A002532BD /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		425969271F453AB900C1A817 /* YDNoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDNoteModel.h; sourceTree = "<group>"; };
 		425969281F453AB900C1A817 /* YDNoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDNoteModel.m; sourceTree = "<group>"; };
 		4259692A1F45416200C1A817 /* YDEditNoteFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDEditNoteFootView.h; sourceTree = "<group>"; };
@@ -233,6 +240,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421B84D11F4DB251003FE9EE /* v2c */ = {
+			isa = PBXGroup;
+			children = (
+				421B84D21F4DB26C003FE9EE /* YDV2TManager.h */,
+				421B84D31F4DB26C003FE9EE /* YDV2TManager.m */,
+				421B84D51F4DB27C003FE9EE /* YDV2TTool.h */,
+				421B84D61F4DB27C003FE9EE /* YDV2TTool.m */,
+				421B84D81F4DB28A003FE9EE /* YDT2VTool.h */,
+				421B84D91F4DB28A003FE9EE /* YDT2VTool.m */,
+			);
+			path = v2c;
+			sourceTree = "<group>";
+		};
 		422A686F1EF2BF1600326466 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,7 +298,6 @@
 		428BD5911EE8E19800463C1E /* YDialogues */ = {
 			isa = PBXGroup;
 			children = (
-				4232B5FD1F4AC83A002532BD /* 1.png */,
 				42D70AD31F46BDAD00DF02AB /* lib */,
 				425969361F4579E500C1A817 /* custom view */,
 				4298A6391EEA96010097BF1D /* tool */,
@@ -515,6 +534,7 @@
 		4298A6391EEA96010097BF1D /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				421B84D11F4DB251003FE9EE /* v2c */,
 				42D70ACF1F46B9F800DF02AB /* translation */,
 				4298A63A1EEA961A0097BF1D /* YDRegexTool.h */,
 				4298A63B1EEA961A0097BF1D /* YDRegexTool.m */,
@@ -679,7 +699,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				428BD5A21EE8E19800463C1E /* LaunchScreen.storyboard in Resources */,
-				4232B5FE1F4AC83A002532BD /* 1.png in Resources */,
 				428BD59F1EE8E19800463C1E /* Assets.xcassets in Resources */,
 				428BD59D1EE8E19800463C1E /* Main.storyboard in Resources */,
 			);
@@ -762,6 +781,7 @@
 				428BD5D91EE8EB7E00463C1E /* YDDBTool.m in Sources */,
 				425969481F458F6400C1A817 /* YDDBTool+transCache.m in Sources */,
 				42CCB47F1EF23C2A00995C0B /* DOUAudioStreamer.m in Sources */,
+				421B84D41F4DB26C003FE9EE /* YDV2TManager.m in Sources */,
 				42AF1AB81F4D542400851D9D /* UIView+FrameExtention.m in Sources */,
 				422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */,
 				42D70AF51F46D54400DF02AB /* NSString+Hashes.m in Sources */,
@@ -775,6 +795,7 @@
 				42AF1ABB1F4D58DB00851D9D /* YDV2TModel.m in Sources */,
 				42CCB48A1EF262A700995C0B /* NSString+YDHandle.m in Sources */,
 				428BD5D11EE8E2BF00463C1E /* YXFPayTool.m in Sources */,
+				421B84DA1F4DB28A003FE9EE /* YDT2VTool.m in Sources */,
 				4259692F1F4549CB00C1A817 /* YDNoteWordModel.m in Sources */,
 				42CCB47D1EF23C2A00995C0B /* DOUAudioSpatialAnalyzer.m in Sources */,
 				425969391F4579FE00C1A817 /* YDRadiusView.m in Sources */,
@@ -788,6 +809,7 @@
 				4232B5F21F4ABE2D002532BD /* YDOcrViewController.m in Sources */,
 				4232B5F81F4ABFE9002532BD /* YDYoudaoConfig.m in Sources */,
 				428BD5DC1EE8EC5700463C1E /* NSString+FilePath.m in Sources */,
+				421B84D71F4DB27C003FE9EE /* YDV2TTool.m in Sources */,
 				4232B5F51F4ABFB6002532BD /* YDOcrTool.m in Sources */,
 				428BD5EF1EE9295B00463C1E /* UILabel+Normal.m in Sources */,
 				42D70AC41F4680FB00DF02AB /* YDTransViewController.m in Sources */,

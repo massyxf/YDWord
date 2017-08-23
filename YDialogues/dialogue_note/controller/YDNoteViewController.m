@@ -69,7 +69,6 @@
 -(IBAction)addNote:(id)sender
 {
     YDEditNoteViewController *editVc = [[YDEditNoteViewController alloc] init];
-    editVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:editVc animated:YES];
 }
 

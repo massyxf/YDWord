@@ -9,6 +9,7 @@
 #import "YDV2TViewController.h"
 #import "YDV2TCell.h"
 #import "YDV2TModel.h"
+#import "YDV2TTool.h"
 
 @interface YDV2TViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -68,5 +69,7 @@
 -(NSInteger)bindBtnTag{
     return YDTransTag + 1;
 }
+
+#pragma mark - action
 
 @end
