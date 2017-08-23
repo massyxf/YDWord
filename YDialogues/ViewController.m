@@ -10,11 +10,17 @@
 #import "YDNoteViewController.h"
 #import "YDEditNoteViewController.h"
 #import "YDGameViewController.h"
-#import "YDTranslationViewController.h"
 #import "YDDBTool+noteCache.h"
+#import "YDTranslationViewController.h"
+#import "YDWindowView.h"
 
-@interface ViewController ()
+@interface ViewController ()<YDWindowViewDelegate>
 
+/** note*/
+@property(nonatomic,weak)UINavigationController *noteNavi;
+
+/** trans*/
+@property(nonatomic,weak)UINavigationController *transNavi;
 
 @end
 
@@ -32,14 +38,18 @@
         editVc.navigationItem.hidesBackButton = YES;
         [noteVc pushViewController:editVc animated:NO];
     }
+    _noteNavi = noteVc;
     
-    UINavigationController *gameVc = [self naviWithRootVcClass:[YDGameViewController class] title:@"游戏" img:@""];
-    [subVcs addObject:gameVc];
+//    UINavigationController *gameVc = [self naviWithRootVcClass:[YDGameViewController class] title:@"游戏" img:@""];
+//    [subVcs addObject:gameVc];
     
     UINavigationController *transVc = [self naviWithRootVcClass:[YDTranslationViewController class] title:@"翻译" img:@""];
     [subVcs addObject:transVc];
+    _transNavi = transVc;
     
     self.viewControllers = subVcs;
+    self.tabBar.hidden = YES;
+    [YDWindowView windowView].delegate = self;
 }
 
 -(UINavigationController *)naviWithRootVcClass:(Class)class title:(NSString *)title img:(NSString *)img{
@@ -51,6 +61,18 @@
         return navi;
     }
     return nil;
+}
+
+#pragma mark - YDWindowViewDelegate
+-(void)windowView:(YDWindowView *)windowView selectIndex:(YDTabClass)index{
+    NSInteger selectedIndex = self.selectedIndex;
+    if (index != selectedIndex) {
+        if (index == 0) {
+            self.selectedViewController = _noteNavi;
+        }else{
+            self.selectedViewController = _transNavi;
+        }
+    }
 }
 
 @end

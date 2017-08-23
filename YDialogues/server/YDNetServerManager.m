@@ -56,13 +56,6 @@
      progress:uploadProgress
      success:success
      failure:failure];
-//
-//    [[YDNetServerManager shareInstance].manager
-//     GET:url
-//     parameters:params
-//     progress:uploadProgress
-//     success:success
-//     failure:failure];
 }
 
 #pragma mark - public

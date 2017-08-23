@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#define YDTransTag 999
+
 @protocol YDTransSubVcProtocol <NSObject>
 
 -(NSString *)bindBtnTitle;
 
 -(NSInteger)bindBtnTag;
-
--(void)transText:(NSString *)text;
 
 @end

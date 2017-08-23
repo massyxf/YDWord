@@ -10,13 +10,7 @@
 #import "YDNetServerManager.h"
 #import "NSString+Hashes.h"
 #import "YDYoudaoModel.h"
-
-//id 22abdb49f3ec3b29
-//key I1to04WGsAZizsKBVLgKURa6tkigbVvb
-
-#define YDYoudaoUrl @"https://openapi.youdao.com/api"
-#define YDYoudaoId @"22abdb49f3ec3b29"
-#define YDYoudaoKey @"I1to04WGsAZizsKBVLgKURa6tkigbVvb"
+#import "YDYoudaoConfig.h"
 
 @interface YDYoudaoTransTool ()
 
@@ -24,26 +18,21 @@
 
 @implementation YDYoudaoTransTool
 
-+(instancetype)shareInstance{
-    static YDYoudaoTransTool *tool = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-    });
-    return tool;
-}
-
 +(void)transText:(NSString *)text from:(YDYoudaoTransLangType)fromLang to:(YDYoudaoTransLangType)toLang complete:(YDTransCompletion)complete{
+    
+    YDYoudaoConfig *config = [YDYoudaoConfig initForTrans:YES];
+    
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSString *q = [text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     dict[@"q"] = q;
     dict[@"from"] = [self langFromId:fromLang];
     dict[@"to"] = [self langFromId:toLang];
-    dict[@"appKey"] = YDYoudaoId;
+    dict[@"appKey"] = config.youdaoId;
     NSNumber *salt = @((NSInteger)[[NSDate date] timeIntervalSince1970]);
     dict[@"salt"] = salt;
-    dict[@"sign"] = [NSString stringWithFormat:@"%@%@%@%@",YDYoudaoId,text,salt,YDYoudaoKey].md5.lowercaseString;
+    dict[@"sign"] = [NSString stringWithFormat:@"%@%@%@%@",config.youdaoId,text,salt,config.youdaokey].md5.lowercaseString;
     
-    [YDNetServerManager transTextWithUrl:YDYoudaoUrl
+    [YDNetServerManager transTextWithUrl:config.youdaoHost
                                   params:dict
                               completion:^(id result, NSError *error) {
                                   if (error) {

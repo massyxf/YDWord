@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A68741EF2BF6E00326466 /* YDTransWordView.m */; };
+		4232B5EE1F4ABC84002532BD /* YDTranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5E91F4ABC84002532BD /* YDTranslationViewController.m */; };
+		4232B5F21F4ABE2D002532BD /* YDOcrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5F11F4ABE2D002532BD /* YDOcrViewController.m */; };
+		4232B5F51F4ABFB6002532BD /* YDOcrTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5F41F4ABFB6002532BD /* YDOcrTool.m */; };
+		4232B5F81F4ABFE9002532BD /* YDYoudaoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4232B5F71F4ABFE9002532BD /* YDYoudaoConfig.m */; };
+		4232B5FE1F4AC83A002532BD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4232B5FD1F4AC83A002532BD /* 1.png */; };
 		425969291F453AB900C1A817 /* YDNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 425969281F453AB900C1A817 /* YDNoteModel.m */; };
 		4259692C1F45416300C1A817 /* YDEditNoteFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259692B1F45416300C1A817 /* YDEditNoteFootView.m */; };
 		4259692F1F4549CB00C1A817 /* YDNoteWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259692E1F4549CB00C1A817 /* YDNoteWordModel.m */; };
@@ -24,14 +29,11 @@
 		428BD59D1EE8E19800463C1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428BD59B1EE8E19800463C1E /* Main.storyboard */; };
 		428BD59F1EE8E19800463C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428BD59E1EE8E19800463C1E /* Assets.xcassets */; };
 		428BD5A21EE8E19800463C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428BD5A01EE8E19800463C1E /* LaunchScreen.storyboard */; };
-		428BD5AD1EE8E19B00463C1E /* YDialoguesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5AC1EE8E19B00463C1E /* YDialoguesTests.m */; };
-		428BD5B81EE8E19B00463C1E /* YDialoguesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5B71EE8E19B00463C1E /* YDialoguesUITests.m */; };
 		428BD5D11EE8E2BF00463C1E /* YXFPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5D01EE8E2BF00463C1E /* YXFPayTool.m */; };
 		428BD5D51EE8E53A00463C1E /* NSError+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5D41EE8E53A00463C1E /* NSError+Custom.m */; };
 		428BD5D91EE8EB7E00463C1E /* YDDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5D81EE8EB7E00463C1E /* YDDBTool.m */; };
 		428BD5DC1EE8EC5700463C1E /* NSString+FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5DB1EE8EC5700463C1E /* NSString+FilePath.m */; };
 		428BD5DF1EE8EFE200463C1E /* YDGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5DE1EE8EFE200463C1E /* YDGameViewController.m */; };
-		428BD5E61EE9232300463C1E /* YDTranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5E51EE9232300463C1E /* YDTranslationViewController.m */; };
 		428BD5E91EE923A400463C1E /* YDNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5E81EE923A400463C1E /* YDNoteViewController.m */; };
 		428BD5EC1EE924F600463C1E /* YDNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5EB1EE924F600463C1E /* YDNoteCell.m */; };
 		428BD5EF1EE9295B00463C1E /* UILabel+Normal.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BD5EE1EE9295B00463C1E /* UILabel+Normal.m */; };
@@ -40,6 +42,11 @@
 		4298A6231EEA7BB60097BF1D /* YDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A6221EEA7BB60097BF1D /* YDBaseModel.m */; };
 		4298A63C1EEA961A0097BF1D /* YDRegexTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A63B1EEA961A0097BF1D /* YDRegexTool.m */; };
 		4298A63F1EEA9F690097BF1D /* YDEditNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4298A63E1EEA9F690097BF1D /* YDEditNoteViewController.m */; };
+		42AF1AB21F4D26E100851D9D /* YDV2TViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF1AB11F4D26E100851D9D /* YDV2TViewController.m */; };
+		42AF1AB51F4D33E600851D9D /* YDV2TCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF1AB41F4D33E600851D9D /* YDV2TCell.m */; };
+		42AF1AB81F4D542400851D9D /* UIView+FrameExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF1AB71F4D542400851D9D /* UIView+FrameExtention.m */; };
+		42AF1ABB1F4D58DB00851D9D /* YDV2TModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF1ABA1F4D58DB00851D9D /* YDV2TModel.m */; };
+		42AF1ABE1F4D6E8E00851D9D /* YDWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF1ABD1F4D6E8E00851D9D /* YDWindowView.m */; };
 		42CCB4731EF23C2A00995C0B /* DOUAudioAnalyzer+Default.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB44C1EF23C2900995C0B /* DOUAudioAnalyzer+Default.m */; };
 		42CCB4741EF23C2A00995C0B /* DOUAudioAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB44E1EF23C2900995C0B /* DOUAudioAnalyzer.m */; };
 		42CCB4751EF23C2A00995C0B /* DOUAudioDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4521EF23C2900995C0B /* DOUAudioDecoder.m */; };
@@ -60,9 +67,6 @@
 		42CCB4841EF23C2A00995C0B /* NSData+DOUMappedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4721EF23C2900995C0B /* NSData+DOUMappedFile.m */; };
 		42CCB48A1EF262A700995C0B /* NSString+YDHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCB4891EF262A700995C0B /* NSString+YDHandle.m */; };
 		42D70AC41F4680FB00DF02AB /* YDTransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AC31F4680FB00DF02AB /* YDTransViewController.m */; };
-		42D70AC71F46841F00DF02AB /* YDYinghanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AC61F46841F00DF02AB /* YDYinghanViewController.m */; };
-		42D70ACA1F46842C00DF02AB /* YDXinhuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AC91F46842C00DF02AB /* YDXinhuaViewController.m */; };
-		42D70ACD1F46843A00DF02AB /* YDChengyuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70ACC1F46843A00DF02AB /* YDChengyuViewController.m */; };
 		42D70AD21F46BA1900DF02AB /* YDYoudaoTransTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AD11F46BA1900DF02AB /* YDYoudaoTransTool.m */; };
 		42D70AF51F46D54400DF02AB /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AF41F46D54400DF02AB /* NSString+Hashes.m */; };
 		42D70AF81F46E04F00DF02AB /* YDYoudaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AF71F46E04F00DF02AB /* YDYoudaoModel.m */; };
@@ -70,27 +74,20 @@
 		4C999AD4587F3DB61D4D85F9 /* libPods-YDialogues.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D89C3DC092C00F9C2F034C9 /* libPods-YDialogues.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		428BD5A91EE8E19B00463C1E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 428BD5871EE8E19800463C1E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 428BD58E1EE8E19800463C1E;
-			remoteInfo = YDialogues;
-		};
-		428BD5B41EE8E19B00463C1E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 428BD5871EE8E19800463C1E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 428BD58E1EE8E19800463C1E;
-			remoteInfo = YDialogues;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		339735FA8DAFA5E4C483A4C5 /* Pods-YDialogues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDialogues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDialogues/Pods-YDialogues.debug.xcconfig"; sourceTree = "<group>"; };
 		422A68731EF2BF6E00326466 /* YDTransWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransWordView.h; sourceTree = "<group>"; };
 		422A68741EF2BF6E00326466 /* YDTransWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTransWordView.m; sourceTree = "<group>"; };
+		4232B5E81F4ABC84002532BD /* YDTranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTranslationViewController.h; sourceTree = "<group>"; };
+		4232B5E91F4ABC84002532BD /* YDTranslationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTranslationViewController.m; sourceTree = "<group>"; };
+		4232B5EA1F4ABC84002532BD /* YDTransSubVcProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransSubVcProtocol.h; sourceTree = "<group>"; };
+		4232B5F01F4ABE2D002532BD /* YDOcrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDOcrViewController.h; sourceTree = "<group>"; };
+		4232B5F11F4ABE2D002532BD /* YDOcrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDOcrViewController.m; sourceTree = "<group>"; };
+		4232B5F31F4ABFB6002532BD /* YDOcrTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDOcrTool.h; sourceTree = "<group>"; };
+		4232B5F41F4ABFB6002532BD /* YDOcrTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDOcrTool.m; sourceTree = "<group>"; };
+		4232B5F61F4ABFE9002532BD /* YDYoudaoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDYoudaoConfig.h; sourceTree = "<group>"; };
+		4232B5F71F4ABFE9002532BD /* YDYoudaoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDYoudaoConfig.m; sourceTree = "<group>"; };
+		4232B5FD1F4AC83A002532BD /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		425969271F453AB900C1A817 /* YDNoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDNoteModel.h; sourceTree = "<group>"; };
 		425969281F453AB900C1A817 /* YDNoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDNoteModel.m; sourceTree = "<group>"; };
 		4259692A1F45416200C1A817 /* YDEditNoteFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDEditNoteFootView.h; sourceTree = "<group>"; };
@@ -121,10 +118,8 @@
 		428BD59E1EE8E19800463C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		428BD5A11EE8E19800463C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		428BD5A31EE8E19900463C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		428BD5A81EE8E19B00463C1E /* YDialoguesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YDialoguesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		428BD5AC1EE8E19B00463C1E /* YDialoguesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDialoguesTests.m; sourceTree = "<group>"; };
 		428BD5AE1EE8E19B00463C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		428BD5B31EE8E19B00463C1E /* YDialoguesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YDialoguesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		428BD5B71EE8E19B00463C1E /* YDialoguesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDialoguesUITests.m; sourceTree = "<group>"; };
 		428BD5B91EE8E19B00463C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428BD5CF1EE8E2BF00463C1E /* YXFPayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXFPayTool.h; sourceTree = "<group>"; };
@@ -138,8 +133,6 @@
 		428BD5DB1EE8EC5700463C1E /* NSString+FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FilePath.m"; sourceTree = "<group>"; };
 		428BD5DD1EE8EFE200463C1E /* YDGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGameViewController.h; sourceTree = "<group>"; };
 		428BD5DE1EE8EFE200463C1E /* YDGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDGameViewController.m; sourceTree = "<group>"; };
-		428BD5E41EE9232300463C1E /* YDTranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTranslationViewController.h; sourceTree = "<group>"; };
-		428BD5E51EE9232300463C1E /* YDTranslationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTranslationViewController.m; sourceTree = "<group>"; };
 		428BD5E71EE923A400463C1E /* YDNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDNoteViewController.h; sourceTree = "<group>"; };
 		428BD5E81EE923A400463C1E /* YDNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDNoteViewController.m; sourceTree = "<group>"; };
 		428BD5EA1EE924F600463C1E /* YDNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDNoteCell.h; sourceTree = "<group>"; };
@@ -156,6 +149,16 @@
 		4298A63B1EEA961A0097BF1D /* YDRegexTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDRegexTool.m; sourceTree = "<group>"; };
 		4298A63D1EEA9F690097BF1D /* YDEditNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDEditNoteViewController.h; sourceTree = "<group>"; };
 		4298A63E1EEA9F690097BF1D /* YDEditNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDEditNoteViewController.m; sourceTree = "<group>"; };
+		42AF1AB01F4D26E100851D9D /* YDV2TViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TViewController.h; sourceTree = "<group>"; };
+		42AF1AB11F4D26E100851D9D /* YDV2TViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TViewController.m; sourceTree = "<group>"; };
+		42AF1AB31F4D33E600851D9D /* YDV2TCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TCell.h; sourceTree = "<group>"; };
+		42AF1AB41F4D33E600851D9D /* YDV2TCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TCell.m; sourceTree = "<group>"; };
+		42AF1AB61F4D542400851D9D /* UIView+FrameExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtention.h"; sourceTree = "<group>"; };
+		42AF1AB71F4D542400851D9D /* UIView+FrameExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtention.m"; sourceTree = "<group>"; };
+		42AF1AB91F4D58DB00851D9D /* YDV2TModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TModel.h; sourceTree = "<group>"; };
+		42AF1ABA1F4D58DB00851D9D /* YDV2TModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TModel.m; sourceTree = "<group>"; };
+		42AF1ABC1F4D6E8E00851D9D /* YDWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDWindowView.h; sourceTree = "<group>"; };
+		42AF1ABD1F4D6E8E00851D9D /* YDWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDWindowView.m; sourceTree = "<group>"; };
 		42CCB44B1EF23C2900995C0B /* DOUAudioAnalyzer+Default.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DOUAudioAnalyzer+Default.h"; sourceTree = "<group>"; };
 		42CCB44C1EF23C2900995C0B /* DOUAudioAnalyzer+Default.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DOUAudioAnalyzer+Default.m"; sourceTree = "<group>"; };
 		42CCB44D1EF23C2900995C0B /* DOUAudioAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAudioAnalyzer.h; sourceTree = "<group>"; };
@@ -200,13 +203,6 @@
 		42CCB4891EF262A700995C0B /* NSString+YDHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YDHandle.m"; sourceTree = "<group>"; };
 		42D70AC21F4680FB00DF02AB /* YDTransViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransViewController.h; sourceTree = "<group>"; };
 		42D70AC31F4680FB00DF02AB /* YDTransViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTransViewController.m; sourceTree = "<group>"; };
-		42D70AC51F46841F00DF02AB /* YDYinghanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDYinghanViewController.h; sourceTree = "<group>"; };
-		42D70AC61F46841F00DF02AB /* YDYinghanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDYinghanViewController.m; sourceTree = "<group>"; };
-		42D70AC81F46842C00DF02AB /* YDXinhuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDXinhuaViewController.h; sourceTree = "<group>"; };
-		42D70AC91F46842C00DF02AB /* YDXinhuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDXinhuaViewController.m; sourceTree = "<group>"; };
-		42D70ACB1F46843A00DF02AB /* YDChengyuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDChengyuViewController.h; sourceTree = "<group>"; };
-		42D70ACC1F46843A00DF02AB /* YDChengyuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDChengyuViewController.m; sourceTree = "<group>"; };
-		42D70ACE1F468C1B00DF02AB /* YDTransSubVcProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransSubVcProtocol.h; sourceTree = "<group>"; };
 		42D70AD01F46BA1900DF02AB /* YDYoudaoTransTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDYoudaoTransTool.h; sourceTree = "<group>"; };
 		42D70AD11F46BA1900DF02AB /* YDYoudaoTransTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDYoudaoTransTool.m; sourceTree = "<group>"; };
 		42D70AE71F46BF2B00DF02AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -234,20 +230,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		428BD5A51EE8E19B00463C1E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		428BD5B01EE8E19B00463C1E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -256,6 +238,8 @@
 			children = (
 				422A68731EF2BF6E00326466 /* YDTransWordView.h */,
 				422A68741EF2BF6E00326466 /* YDTransWordView.m */,
+				42AF1AB31F4D33E600851D9D /* YDV2TCell.h */,
+				42AF1AB41F4D33E600851D9D /* YDV2TCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -265,6 +249,8 @@
 			children = (
 				425969371F4579FE00C1A817 /* YDRadiusView.h */,
 				425969381F4579FE00C1A817 /* YDRadiusView.m */,
+				42AF1ABC1F4D6E8E00851D9D /* YDWindowView.h */,
+				42AF1ABD1F4D6E8E00851D9D /* YDWindowView.m */,
 			);
 			path = "custom view";
 			sourceTree = "<group>";
@@ -285,8 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				428BD58F1EE8E19800463C1E /* YDialogues.app */,
-				428BD5A81EE8E19B00463C1E /* YDialoguesTests.xctest */,
-				428BD5B31EE8E19B00463C1E /* YDialoguesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +278,7 @@
 		428BD5911EE8E19800463C1E /* YDialogues */ = {
 			isa = PBXGroup;
 			children = (
+				4232B5FD1F4AC83A002532BD /* 1.png */,
 				42D70AD31F46BDAD00DF02AB /* lib */,
 				425969361F4579E500C1A817 /* custom view */,
 				4298A6391EEA96010097BF1D /* tool */,
@@ -464,6 +449,8 @@
 				42CCB4891EF262A700995C0B /* NSString+YDHandle.m */,
 				428BD5ED1EE9295B00463C1E /* UILabel+Normal.h */,
 				428BD5EE1EE9295B00463C1E /* UILabel+Normal.m */,
+				42AF1AB61F4D542400851D9D /* UIView+FrameExtention.h */,
+				42AF1AB71F4D542400851D9D /* UIView+FrameExtention.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -481,17 +468,15 @@
 		428BD5E11EE922FE00463C1E /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				428BD5E41EE9232300463C1E /* YDTranslationViewController.h */,
-				428BD5E51EE9232300463C1E /* YDTranslationViewController.m */,
+				4232B5E81F4ABC84002532BD /* YDTranslationViewController.h */,
+				4232B5E91F4ABC84002532BD /* YDTranslationViewController.m */,
+				4232B5EA1F4ABC84002532BD /* YDTransSubVcProtocol.h */,
 				42D70AC21F4680FB00DF02AB /* YDTransViewController.h */,
 				42D70AC31F4680FB00DF02AB /* YDTransViewController.m */,
-				42D70AC51F46841F00DF02AB /* YDYinghanViewController.h */,
-				42D70AC61F46841F00DF02AB /* YDYinghanViewController.m */,
-				42D70AC81F46842C00DF02AB /* YDXinhuaViewController.h */,
-				42D70AC91F46842C00DF02AB /* YDXinhuaViewController.m */,
-				42D70ACB1F46843A00DF02AB /* YDChengyuViewController.h */,
-				42D70ACC1F46843A00DF02AB /* YDChengyuViewController.m */,
-				42D70ACE1F468C1B00DF02AB /* YDTransSubVcProtocol.h */,
+				42AF1AB01F4D26E100851D9D /* YDV2TViewController.h */,
+				42AF1AB11F4D26E100851D9D /* YDV2TViewController.m */,
+				4232B5F01F4ABE2D002532BD /* YDOcrViewController.h */,
+				4232B5F11F4ABE2D002532BD /* YDOcrViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -501,6 +486,8 @@
 			children = (
 				42D70AF61F46E04F00DF02AB /* YDYoudaoModel.h */,
 				42D70AF71F46E04F00DF02AB /* YDYoudaoModel.m */,
+				42AF1AB91F4D58DB00851D9D /* YDV2TModel.h */,
+				42AF1ABA1F4D58DB00851D9D /* YDV2TModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -590,6 +577,10 @@
 			children = (
 				42D70AD01F46BA1900DF02AB /* YDYoudaoTransTool.h */,
 				42D70AD11F46BA1900DF02AB /* YDYoudaoTransTool.m */,
+				4232B5F31F4ABFB6002532BD /* YDOcrTool.h */,
+				4232B5F41F4ABFB6002532BD /* YDOcrTool.m */,
+				4232B5F61F4ABFE9002532BD /* YDYoudaoConfig.h */,
+				4232B5F71F4ABFE9002532BD /* YDYoudaoConfig.m */,
 			);
 			path = translation;
 			sourceTree = "<group>";
@@ -647,42 +638,6 @@
 			productReference = 428BD58F1EE8E19800463C1E /* YDialogues.app */;
 			productType = "com.apple.product-type.application";
 		};
-		428BD5A71EE8E19B00463C1E /* YDialoguesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 428BD5BF1EE8E19B00463C1E /* Build configuration list for PBXNativeTarget "YDialoguesTests" */;
-			buildPhases = (
-				428BD5A41EE8E19B00463C1E /* Sources */,
-				428BD5A51EE8E19B00463C1E /* Frameworks */,
-				428BD5A61EE8E19B00463C1E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				428BD5AA1EE8E19B00463C1E /* PBXTargetDependency */,
-			);
-			name = YDialoguesTests;
-			productName = YDialoguesTests;
-			productReference = 428BD5A81EE8E19B00463C1E /* YDialoguesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		428BD5B21EE8E19B00463C1E /* YDialoguesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 428BD5C21EE8E19B00463C1E /* Build configuration list for PBXNativeTarget "YDialoguesUITests" */;
-			buildPhases = (
-				428BD5AF1EE8E19B00463C1E /* Sources */,
-				428BD5B01EE8E19B00463C1E /* Frameworks */,
-				428BD5B11EE8E19B00463C1E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				428BD5B51EE8E19B00463C1E /* PBXTargetDependency */,
-			);
-			name = YDialoguesUITests;
-			productName = YDialoguesUITests;
-			productReference = 428BD5B31EE8E19B00463C1E /* YDialoguesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -697,16 +652,6 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HDBTF9879K;
 						ProvisioningStyle = Manual;
-					};
-					428BD5A71EE8E19B00463C1E = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 428BD58E1EE8E19800463C1E;
-					};
-					428BD5B21EE8E19B00463C1E = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 428BD58E1EE8E19800463C1E;
 					};
 				};
 			};
@@ -724,8 +669,6 @@
 			projectRoot = "";
 			targets = (
 				428BD58E1EE8E19800463C1E /* YDialogues */,
-				428BD5A71EE8E19B00463C1E /* YDialoguesTests */,
-				428BD5B21EE8E19B00463C1E /* YDialoguesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -736,22 +679,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				428BD5A21EE8E19800463C1E /* LaunchScreen.storyboard in Resources */,
+				4232B5FE1F4AC83A002532BD /* 1.png in Resources */,
 				428BD59F1EE8E19800463C1E /* Assets.xcassets in Resources */,
 				428BD59D1EE8E19800463C1E /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		428BD5A61EE8E19B00463C1E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		428BD5B11EE8E19B00463C1E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428BD5F21EE9501B00463C1E /* YDAddDialogueViewController.m in Sources */,
+				4232B5EE1F4ABC84002532BD /* YDTranslationViewController.m in Sources */,
 				42D70AF81F46E04F00DF02AB /* YDYoudaoModel.m in Sources */,
 				42D756401F45BECA0025B7D6 /* YDTimeTool.m in Sources */,
 				4298A63C1EEA961A0097BF1D /* YDRegexTool.m in Sources */,
@@ -820,27 +751,28 @@
 				4298A63F1EEA9F690097BF1D /* YDEditNoteViewController.m in Sources */,
 				42CCB4741EF23C2A00995C0B /* DOUAudioAnalyzer.m in Sources */,
 				42CCB4801EF23C2A00995C0B /* DOUAudioVisualizer.m in Sources */,
-				42D70ACA1F46842C00DF02AB /* YDXinhuaViewController.m in Sources */,
 				4298A6231EEA7BB60097BF1D /* YDBaseModel.m in Sources */,
 				428BD59A1EE8E19800463C1E /* ViewController.m in Sources */,
+				42AF1ABE1F4D6E8E00851D9D /* YDWindowView.m in Sources */,
 				425969351F4569A500C1A817 /* YDWordCell.m in Sources */,
-				428BD5E61EE9232300463C1E /* YDTranslationViewController.m in Sources */,
 				42CCB4781EF23C2A00995C0B /* DOUAudioFileProvider.m in Sources */,
 				42D70AD21F46BA1900DF02AB /* YDYoudaoTransTool.m in Sources */,
 				42CCB4811EF23C2A00995C0B /* DOUEAGLView.m in Sources */,
 				428BD5971EE8E19800463C1E /* AppDelegate.m in Sources */,
-				42D70AC71F46841F00DF02AB /* YDYinghanViewController.m in Sources */,
 				428BD5D91EE8EB7E00463C1E /* YDDBTool.m in Sources */,
 				425969481F458F6400C1A817 /* YDDBTool+transCache.m in Sources */,
 				42CCB47F1EF23C2A00995C0B /* DOUAudioStreamer.m in Sources */,
+				42AF1AB81F4D542400851D9D /* UIView+FrameExtention.m in Sources */,
 				422A68751EF2BF6E00326466 /* YDTransWordView.m in Sources */,
 				42D70AF51F46D54400DF02AB /* NSString+Hashes.m in Sources */,
 				42CCB4771EF23C2A00995C0B /* DOUAudioFilePreprocessor.m in Sources */,
 				425969421F458EC600C1A817 /* YDDBTool+wordCache.m in Sources */,
+				42AF1AB51F4D33E600851D9D /* YDV2TCell.m in Sources */,
 				428BD5D51EE8E53A00463C1E /* NSError+Custom.m in Sources */,
 				42CCB4751EF23C2A00995C0B /* DOUAudioDecoder.m in Sources */,
 				42CCB47A1EF23C2A00995C0B /* DOUAudioLPCM.m in Sources */,
 				428BD5E91EE923A400463C1E /* YDNoteViewController.m in Sources */,
+				42AF1ABB1F4D58DB00851D9D /* YDV2TModel.m in Sources */,
 				42CCB48A1EF262A700995C0B /* NSString+YDHandle.m in Sources */,
 				428BD5D11EE8E2BF00463C1E /* YXFPayTool.m in Sources */,
 				4259692F1F4549CB00C1A817 /* YDNoteWordModel.m in Sources */,
@@ -848,16 +780,19 @@
 				425969391F4579FE00C1A817 /* YDRadiusView.m in Sources */,
 				42CCB47B1EF23C2A00995C0B /* DOUAudioPlaybackItem.m in Sources */,
 				42CCB4791EF23C2A00995C0B /* DOUAudioFrequencyAnalyzer.m in Sources */,
-				42D70ACD1F46843A00DF02AB /* YDChengyuViewController.m in Sources */,
 				425969321F454A7A00C1A817 /* YDCommonModel.m in Sources */,
 				42CCB4821EF23C2A00995C0B /* DOUMPMediaLibraryAssetLoader.m in Sources */,
 				428BD5941EE8E19800463C1E /* main.m in Sources */,
 				42CCB4831EF23C2A00995C0B /* DOUSimpleHTTPRequest.m in Sources */,
 				425969451F458ED300C1A817 /* YDDBTool+noteCache.m in Sources */,
+				4232B5F21F4ABE2D002532BD /* YDOcrViewController.m in Sources */,
+				4232B5F81F4ABFE9002532BD /* YDYoudaoConfig.m in Sources */,
 				428BD5DC1EE8EC5700463C1E /* NSString+FilePath.m in Sources */,
+				4232B5F51F4ABFB6002532BD /* YDOcrTool.m in Sources */,
 				428BD5EF1EE9295B00463C1E /* UILabel+Normal.m in Sources */,
 				42D70AC41F4680FB00DF02AB /* YDTransViewController.m in Sources */,
 				428BD5EC1EE924F600463C1E /* YDNoteCell.m in Sources */,
+				42AF1AB21F4D26E100851D9D /* YDV2TViewController.m in Sources */,
 				4259692C1F45416300C1A817 /* YDEditNoteFootView.m in Sources */,
 				428BD5DF1EE8EFE200463C1E /* YDGameViewController.m in Sources */,
 				42CCB4761EF23C2A00995C0B /* DOUAudioEventLoop.m in Sources */,
@@ -868,36 +803,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		428BD5A41EE8E19B00463C1E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				428BD5AD1EE8E19B00463C1E /* YDialoguesTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		428BD5AF1EE8E19B00463C1E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				428BD5B81EE8E19B00463C1E /* YDialoguesUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		428BD5AA1EE8E19B00463C1E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 428BD58E1EE8E19800463C1E /* YDialogues */;
-			targetProxy = 428BD5A91EE8E19B00463C1E /* PBXContainerItemProxy */;
-		};
-		428BD5B51EE8E19B00463C1E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 428BD58E1EE8E19800463C1E /* YDialogues */;
-			targetProxy = 428BD5B41EE8E19B00463C1E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		428BD59B1EE8E19800463C1E /* Main.storyboard */ = {
@@ -960,7 +866,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1002,7 +908,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1017,7 +923,7 @@
 				DEVELOPMENT_TEAM = HDBTF9879K;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YDialogues/YDialogue.pch";
 				INFOPLIST_FILE = YDialogues/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1039,7 +945,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YDialogues/YDialogue.pch";
 				INFOPLIST_FILE = YDialogues/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1049,52 +955,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yxf.pocketionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Release;
-		};
-		428BD5C01EE8E19B00463C1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YDialoguesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yxf.YDialoguesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YDialogues.app/YDialogues";
-			};
-			name = Debug;
-		};
-		428BD5C11EE8E19B00463C1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YDialoguesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yxf.YDialoguesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YDialogues.app/YDialogues";
-			};
-			name = Release;
-		};
-		428BD5C31EE8E19B00463C1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YDialoguesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yxf.YDialoguesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = YDialogues;
-			};
-			name = Debug;
-		};
-		428BD5C41EE8E19B00463C1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YDialoguesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yxf.YDialoguesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = YDialogues;
 			};
 			name = Release;
 		};
@@ -1115,24 +975,6 @@
 			buildConfigurations = (
 				428BD5BD1EE8E19B00463C1E /* Debug */,
 				428BD5BE1EE8E19B00463C1E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		428BD5BF1EE8E19B00463C1E /* Build configuration list for PBXNativeTarget "YDialoguesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				428BD5C01EE8E19B00463C1E /* Debug */,
-				428BD5C11EE8E19B00463C1E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		428BD5C21EE8E19B00463C1E /* Build configuration list for PBXNativeTarget "YDialoguesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				428BD5C31EE8E19B00463C1E /* Debug */,
-				428BD5C41EE8E19B00463C1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

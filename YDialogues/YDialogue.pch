@@ -20,6 +20,7 @@
 
 #import "NSError+Custom.h"
 #import "UILabel+Normal.h"
+#import "UIView+FrameExtention.h"
 
 typedef void(^YDTransCompletion)(id result,NSError *error);
 

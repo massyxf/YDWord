@@ -7,9 +7,9 @@
 //
 
 #import "YDTranslationViewController.h"
-#import "YDYinghanViewController.h"
-#import "YDXinhuaViewController.h"
-#import "YDChengyuViewController.h"
+#import "YDTransViewController.h"
+#import "YDV2TViewController.h"
+#import "YDOcrViewController.h"
 
 @interface YDTranslationViewController ()<UIScrollViewDelegate>
 
@@ -48,10 +48,10 @@
 #pragma mark - getter
 -(NSArray<UIViewController *> *)subVcs{
     if (!_subVcs) {
-        YDYinghanViewController *yinghanVc = [[YDYinghanViewController alloc] init];
-        YDXinhuaViewController *xinhuaVc = [[YDXinhuaViewController alloc] init];
-        YDChengyuViewController *chengyuVc = [[YDChengyuViewController alloc] init];
-        _subVcs = @[yinghanVc,xinhuaVc,chengyuVc];
+        YDTransViewController *transVc = [[YDTransViewController alloc] init];
+        YDV2TViewController *v2tVc = [[YDV2TViewController alloc] init];
+//        YDOcrViewController *ocrVc = [[YDOcrViewController alloc] init];
+        _subVcs = @[transVc,v2tVc];
     }
     return _subVcs;
 }
@@ -96,8 +96,9 @@
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSInteger index = (scrollView.contentOffset.x + 10 ) / SCREENWIDTH;
-    if (!self.childViewControllers[index].viewLoaded) {
-        UIView *view = self.childViewControllers[index].view;
+    UIViewController *currentVc = self.childViewControllers[index];
+    if (!currentVc.viewLoaded) {
+        UIView *view = currentVc.view;
         view.frame = CGRectMake(SCREENWIDTH * index, 0, SCREENWIDTH, CGRectGetHeight(scrollView.frame));
         [scrollView addSubview:view];
     }

@@ -11,7 +11,8 @@
 @implementation YDYoudaoModel
 
 +(JSONKeyMapper *)keyMapper{
-    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"usPhonetic":@"basic.us-phonetic",
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"phonetic":@"basic.phonetic",
+                                                                  @"usPhonetic":@"basic.us-phonetic",
                                                                   @"ukPhonetic":@"basic.uk-phonetic",
                                                                   @"explains":@"basic.explains"
                                                                   }];

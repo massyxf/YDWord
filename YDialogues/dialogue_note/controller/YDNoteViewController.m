@@ -10,6 +10,7 @@
 #import "YDNoteCell.h"
 #import "YDEditNoteViewController.h"
 #import "YDDBTool+noteCache.h"
+#import "YDWindowView.h"
 
 @interface YDNoteViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
@@ -41,6 +42,7 @@
                                                             action:@selector(addNote:)];
     self.navigationItem.rightBarButtonItem = item;
     [self loadData];
+    [[UIApplication sharedApplication].delegate.window bringSubviewToFront:[YDWindowView windowView]];
 }
 
 #pragma mark - data
@@ -67,7 +69,7 @@
 -(IBAction)addNote:(id)sender
 {
     YDEditNoteViewController *editVc = [[YDEditNoteViewController alloc] init];
-    self.hidesBottomBarWhenPushed = YES;
+    editVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:editVc animated:YES];
 }
 

@@ -9,11 +9,13 @@
 #import "YDTransViewController.h"
 #import <Masonry/Masonry.h>
 #import "YDNetServerManager.h"
+#import "YDYoudaoTransTool.h"
+#import "YDYoudaoModel.h"
 
-@interface YDTransViewController ()<UITextFieldDelegate>
+@interface YDTransViewController ()<UITextViewDelegate>
 
 /*word*/
-@property (nonatomic,weak)UITextField *wordTextField;
+@property (nonatomic,weak)UITextView *wordTextView;
 
 /** 翻译*/
 @property(nonatomic,weak)UILabel *transLabel;
@@ -34,15 +36,15 @@
                   action:@selector(search:)
         forControlEvents:UIControlEventTouchUpInside];
     
-    UITextField *textField = [[UITextField alloc] init];
-    [self.view addSubview:textField];
-    textField.returnKeyType = UIReturnKeyGo;
-    textField.delegate = self;
-    textField.backgroundColor = [UIColor orangeColor];
-    textField.autocorrectionType = UITextAutocorrectionTypeNo;
-    textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    textField.placeholder = @"请输入要查找的单词或成语";
-    self.wordTextField = textField;
+    UITextView *textView = [[UITextView alloc] init];
+    [self.view addSubview:textView];
+    textView.returnKeyType = UIReturnKeyGo;
+    textView.delegate = self;
+    textView.backgroundColor = [UIColor orangeColor];
+    textView.autocorrectionType = UITextAutocorrectionTypeNo;
+    textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
+//    textView.placeholder = @"请输入要查找的单词或成语";
+    self.wordTextView = textView;
     
     UIScrollView *transScrollView = [[UIScrollView alloc] init];
     [self.view addSubview:transScrollView];
@@ -59,22 +61,22 @@
         make.top.mas_equalTo(self.view).offset(10);
     }];
     
-    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
+    [textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(searchBtn);
         make.leading.mas_equalTo(self.view).offset(10);
         make.trailing.equalTo(searchBtn.mas_leading).offset(-10);
-        make.height.mas_equalTo(30);
+        make.height.mas_equalTo(40);
     }];
     
     [transScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(searchBtn.mas_bottom).offset(10);
-        make.leading.mas_equalTo(textField);
-        make.trailing.mas_equalTo(searchBtn);
-        make.bottom.mas_equalTo(self.view);
+        make.leading.mas_equalTo(textView);
+        make.width.mas_equalTo(SCREENWIDTH - 20);
+        make.bottom.mas_equalTo(self.view).offset(-10);
     }];
     
     [transLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.leading.trailing.mas_equalTo(transScrollView);
+        make.top.leading.width.mas_equalTo(transScrollView);
     }];
     
 }
@@ -82,28 +84,90 @@
 #pragma mark - action
 
 -(IBAction)search:(id)sender{
-    [self transText:self.wordTextField.text];
+    [self.wordTextView resignFirstResponder];
+    [self transText:self.wordTextView.text];
 }
 
 #pragma mark - custom func
 
-#pragma mark - UITextFieldDelegate
--(BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    [self transText:self.wordTextField.text];
-    return YES;
+#pragma mark - UITextViewDelegate
+-(void)textViewDidChange:(UITextView *)textView{
+    if ([textView.text containsString:@"\n"]) {
+       [self transText:textView.text];
+    }
+}
+
+#pragma mark - custom func
+-(void)phonetics:(NSMutableString *)phonetics appendStr:(NSString *)subStr{
+    if (subStr.length > 0) {
+        [phonetics appendString:subStr];
+        [phonetics appendString:@"  "];
+    }
+}
+-(void)transText:(NSString *)text{
+    __weak typeof(self) weakSelf = self;
+    [YDYoudaoTransTool transText:text
+                            from:YDYoudaoTransLangTypeZh
+                              to:YDYoudaoTransLangTypeEn
+                        complete:^(YDYoudaoModel *result, NSError *error) {
+                            if (result) {
+                                NSMutableAttributedString *trans = [[NSMutableAttributedString alloc] init];
+                                
+                                NSMutableString *transitons = [NSMutableString string];
+                                [result.translation enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                                    [transitons appendString:obj];
+                                    if (idx < result.translation.count - 1) {
+                                        [transitons appendString:@","];
+                                    }else{
+                                        [transitons appendString:@"\n"];
+                                    }
+                                }];
+                                NSAttributedString *transResult = [[NSAttributedString alloc] initWithString:transitons];
+                                [trans appendAttributedString:transResult];
+                                
+                                NSMutableAttributedString *basicTrans = [[NSMutableAttributedString alloc] init];
+                                NSMutableString *phoneStr = [NSMutableString string];
+                                [self phonetics:phoneStr appendStr:result.phonetic];
+                                
+                                [self phonetics:phoneStr appendStr:result.usPhonetic];
+                                
+                                [self phonetics:phoneStr appendStr:result.ukPhonetic];
+                                
+                                if (phoneStr.length > 0) {
+                                    [phoneStr appendString:@"\n"];
+                                }
+                                
+                                NSAttributedString *phonetics = [[NSAttributedString alloc] initWithString:phoneStr attributes:nil];
+                                [basicTrans appendAttributedString:phonetics];
+                                
+                                [trans appendAttributedString:basicTrans];
+                                
+                                NSMutableString *webStr = [NSMutableString string];
+                                [result.web enumerateObjectsUsingBlock:^(YDYoudaoWebModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                                    [webStr appendFormat:@"%@:",obj.key];
+                                    [obj.value enumerateObjectsUsingBlock:^(NSString * _Nonnull value, NSUInteger subidx, BOOL * _Nonnull stop) {
+                                        [webStr appendString:value];
+                                        if (subidx < obj.value.count - 1) {
+                                            [webStr appendString:@","];
+                                        }
+                                    }];
+                                    [webStr appendString:@"\n"];
+                                }];
+                                NSAttributedString *webAtt = [[NSAttributedString alloc] initWithString:webStr];
+                                [trans appendAttributedString:webAtt];
+                                
+                                weakSelf.transLabel.attributedText = trans;
+                                [weakSelf.transLabel sizeToFit];
+                                
+                                weakSelf.transScrollView.contentSize = CGSizeMake(0, CGRectGetHeight(weakSelf.transLabel.frame));
+                            }
+                        }];
 }
 
 #pragma mark - YDTransSubVcProtocol
--(NSString *)bindBtnTitle{
-    return nil;
-}
 
--(NSInteger)bindBtnTag{
-    return 0;
-}
+-(NSString *)bindBtnTitle{return @"翻译";}
 
--(void)transText:(NSString *)text{}
+-(NSInteger)bindBtnTag{return YDTransTag + 0;}
 
 @end
