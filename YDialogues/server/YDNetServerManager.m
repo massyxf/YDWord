@@ -56,6 +56,7 @@
      progress:uploadProgress
      success:success
      failure:failure];
+    
 }
 
 #pragma mark - public

@@ -23,7 +23,7 @@
     YDYoudaoConfig *config = [YDYoudaoConfig initForTrans:YES];
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    NSString *q = [text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *q = [text stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@""]];
     dict[@"q"] = q;
     dict[@"from"] = [self langFromId:fromLang];
     dict[@"to"] = [self langFromId:toLang];

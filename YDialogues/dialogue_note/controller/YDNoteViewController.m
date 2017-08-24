@@ -11,6 +11,7 @@
 #import "YDEditNoteViewController.h"
 #import "YDDBTool+noteCache.h"
 #import "YDWindowView.h"
+#import "YDBDTransTool.h"
 
 @interface YDNoteViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
@@ -68,8 +69,13 @@
 #pragma mark - action
 -(IBAction)addNote:(id)sender
 {
-    YDEditNoteViewController *editVc = [[YDEditNoteViewController alloc] init];
-    [self.navigationController pushViewController:editVc animated:YES];
+//    YDEditNoteViewController *editVc = [[YDEditNoteViewController alloc] init];
+//    [self.navigationController pushViewController:editVc animated:YES];
+    
+    [YDBDTransTool transText:@"在生成签名拼接 appid+q+salt+密钥 字符串时，q不需要做URL encode，在生成签名之后，发送HTTP请求之前才需要对要发送的待翻译文本字段q做URL encode。" from:YDBDLangZh to:YDBDLangEn completion:^(id result, NSError *error) {
+        
+    }];
+    
 }
 
 #pragma mark - UITableViewDelegate
