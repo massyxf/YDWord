@@ -10,7 +10,13 @@
 
 @interface YDV2TTool : NSObject
 
+//调用此方法前，必须先调用 initial 方法
 +(instancetype)shareInstance;
+
+//获取语音授权功能是否可用
++(void)initial:(void(^)(BOOL authorized))getAuth;
+
++(void)emptyV2TTool;
 
 -(void)start;
 

@@ -105,12 +105,14 @@ typedef NS_ENUM(NSInteger, YDBtnLocation) {
 }
 
 -(IBAction)transBtnClicked:(id)sender{
+    [self hideBtn];
     if ([self.delegate respondsToSelector:@selector(windowView:selectIndex:)]) {
         [self.delegate windowView:self selectIndex:YDTabClassTrans];
     }
 }
 
 -(IBAction)noteBtnClicked:(id)sender{
+    [self hideBtn];
     if ([self.delegate respondsToSelector:@selector(windowView:selectIndex:)]) {
         [self.delegate windowView:self selectIndex:YDTabClassNote];
     }

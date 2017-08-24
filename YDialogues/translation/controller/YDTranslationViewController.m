@@ -45,8 +45,15 @@
     scrollView.contentSize = CGSizeMake(width * self.subVcs.count, 0);
     [self scrollViewDidEndDecelerating:scrollView];
     
-    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(startV2T:)];
+    
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    [YDV2TTool initial:^(BOOL authorized) {
+        if (authorized) {
+            self.navigationItem.rightBarButtonItem.enabled = YES;
+        }
+    }];
 }
 
 #pragma mark - getter
