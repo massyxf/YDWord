@@ -1,0 +1,14 @@
+ [{"Cname":"中文","Ename":"Chinese","EshortName":"CN"},
+  {"Cname":"英语","Ename":"english","EshortName":"EN"},
+  {"Cname":"法语","Ename":"français","EshortName":"FR"},
+  {"Cname":"日语","Ename":"日本語","EshortName":"JP"},
+  {"Cname":"阿拉伯语","Ename":"العربية","EshortName":"AR"},
+  {"Cname":"西班牙语","Ename":"español","EshortName":"ES"},
+  {"Cname":"俄语","Ename":"русский","EshortName":"RU"},
+  {"Cname":"葡萄牙语","Ename":"português","EshortName":"PT"},
+  {"Cname":"德语","Ename":"Deutsch","EshortName":"DE"},
+  {"Cname":"意大利语","Ename":"Italiano","EshortName":"IT"},
+  {"Cname":"韩语","Ename":"한국의","EshortName":"KR"},
+  {"Cname":"瑞典语","Ename":"svenska","EshortName":"SV"},
+  {"Cname":"泰语","Ename":"ไทย","EshortName":"TH"}
+  ]
