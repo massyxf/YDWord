@@ -10,12 +10,8 @@
 #import <FMDB/FMDB.h>
 #import "NSString+FilePath.h"
 #import "NSString+YDHandle.h"
-#import "YDDBTool+noteCache.h"
-#import "YDDBTool+wordCache.h"
 #import "YDDBTool+transCache.h"
 
-#import "YDNoteWordModel.h"
-#import "YDNoteModel.h"
 
 #define DialogueDB @"DialogueDB.db"
 
@@ -45,18 +41,7 @@
 }
 
 +(void)dbInitial{
-    YDDBTool *tool = [self shareInstance];
     
-    //单词本
-    BOOL createNoteTable = [YDDBTool initialNoteTable];
-    
-    //单词
-    BOOL createWordTable = [YDDBTool initialWordTable];
-    
-    BOOL createSuccess = !createNoteTable || !createWordTable;
-    if (createSuccess && [tool.delegate respondsToSelector:@selector(dbInitialFailed)]) {
-        [tool.delegate dbInitialFailed];
-    }
 }
 
 #pragma mark - public func

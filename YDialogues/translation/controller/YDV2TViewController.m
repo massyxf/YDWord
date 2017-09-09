@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        
     UITableView *transView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:transView];
     transView.delegate = self;
@@ -62,14 +63,6 @@
     return height;
 }
 
-#pragma mark - YDTransSubVcProtocol
--(NSString *)bindBtnTitle{
-    return @"对话面对面";
-}
-
--(NSInteger)bindBtnTag{
-    return YDTransTag + 1;
-}
 
 #pragma mark - action
 

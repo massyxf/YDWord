@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YDTransSubVcProtocol.h"
 
-@interface YDOcrViewController : UIViewController<YDTransSubVcProtocol>
+@interface YDOcrViewController : UIViewController
 
 @end

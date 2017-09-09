@@ -38,13 +38,5 @@
     }];
 }
 
--(NSString *)bindBtnTitle{
-    return @"图片识别";
-}
-
--(NSInteger)bindBtnTag{
-    return YDTransTag + 2;
-}
-
 
 @end
