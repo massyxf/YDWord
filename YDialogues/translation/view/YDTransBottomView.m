@@ -11,7 +11,7 @@
 #import "YDTextView.h"
 #import <Masonry/Masonry.h>
 
-@interface YDTransBottomView ()
+@interface YDTransBottomView ()<CAAnimationDelegate>
 
 /** keyboard*/
 @property(nonatomic,weak)UIButton *keyboardBtn;
@@ -28,6 +28,9 @@
 /** voice view*/
 @property(nonatomic,weak)UIView *voiceView;
 
+/** current view*/
+@property(nonatomic,weak)UIView *currentView;
+
 @end
 
 @implementation YDTransBottomView
@@ -35,12 +38,17 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        CGFloat rate = 66 / 255.0;
+        self.backgroundColor = [UIColor colorWithRed:rate green:rate blue:rate alpha:1.0];
+        
         YDLangView *leftview = [YDLangView initWithType:YDLangViewFrom lang:1];
         [self addSubview:leftview];
         _leftView = leftview;
         
         UIButton *keyboardBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [keyboardBtn setImage:[UIImage imageNamed:@"ic_keyboard"] forState:UIControlStateNormal];
+        [keyboardBtn setImage:[UIImage imageNamed:@"voice_three"] forState:UIControlStateSelected];
+        [keyboardBtn addTarget:self action:@selector(changeTransType:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:keyboardBtn];
         _keyboardBtn = keyboardBtn;
         
@@ -60,7 +68,7 @@
         [leftview mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(self).offset(5);
             make.width.mas_equalTo(60);
-            make.height.mas_equalTo(100);
+            make.height.mas_equalTo(85);
             make.centerY.mas_equalTo(self);
         }];
         
@@ -81,8 +89,40 @@
             make.trailing.equalTo(rightview.mas_leading).offset(-5);
             make.bottom.mas_equalTo(self).offset(-5);
         }];
+        
+        [textView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(view);
+        }];
+        textView.backgroundColor = [UIColor blueColor];
+        view.backgroundColor = [UIColor redColor];
+        view.hidden = YES;
     }
     return self;
+}
+
+-(IBAction)changeTransType:(UIButton *)button{
+    _currentView = button.isSelected ? _voiceView : _textView;
+    CATransition *animation = [CATransition animation];
+    animation.type = @"rippleEffect";
+    animation.startProgress = 0;
+    animation.endProgress = 1.0;
+    animation.duration = 0.25;
+    animation.removedOnCompletion = NO;
+    animation.delegate = self;
+    [_currentView.layer addAnimation:animation forKey:@"niamation"];
+}
+
+-(void)animationDidStart:(CAAnimation *)anim{
+
+}
+
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    if (flag) {
+        _keyboardBtn.selected = !_keyboardBtn.isSelected;
+    }
+    [_currentView.layer removeAllAnimations];
+    _voiceView.hidden = !_keyboardBtn.isSelected;
+    _textView.hidden = _keyboardBtn.isSelected;
 }
 
 @end

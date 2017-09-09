@@ -11,15 +11,16 @@
 @implementation NSString (YDCountryLang)
 
 +(NSString *)languageWithId:(NSInteger)langId{
-    return @"";
+    return @"lang";
 }
 
 +(NSString *)countryWithId:(NSInteger)countryId{
-    return @"";
+    return @"country";
 }
 
 +(NSString *)countryImgWithId:(NSInteger)countryId{
-    return @"";
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"flag_1.png" ofType:nil];
+    return path;
 }
 
 @end

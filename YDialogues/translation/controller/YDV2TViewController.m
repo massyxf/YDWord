@@ -13,6 +13,7 @@
 #import "YDTransBottomView.h"
 #import "YDLangView.h"
 #import "YDLanguagesViewController.h"
+#import "YDHud.h"
 
 #define YDBottomViewHeight 120
 
@@ -38,7 +39,7 @@
     bottomView.leftView.delegate = self;
     bottomView.rightView.delegate = self;
     
-    UITableView *transView = [[UITableView alloc] initWithFrame:CGRectMake(0, YDNaviHeight, SCREENWIDTH, CGRectGetMinY(bottomView.frame)) style:UITableViewStylePlain];
+    UITableView *transView = [[UITableView alloc] initWithFrame:CGRectMake(0, YDNaviHeight, SCREENWIDTH, CGRectGetMinY(bottomView.frame) - YDNaviHeight) style:UITableViewStylePlain];
     [self.view addSubview:transView];
     transView.delegate = self;
     transView.dataSource = self;
@@ -79,18 +80,22 @@
 
 #pragma mark - YDLangViewDelegate
 -(void)langViewChangeCountry:(YDLangView *)langView{
-
+    YDLogFunc;
 }
 
 -(void)langViewSendMsg:(YDLangView *)langView{
-
+    YDLogFunc;
 }
 
 #pragma mark - action
 -(IBAction)selectLanguages:(id)sender{
-    YDLanguagesViewController *langVc = [[YDLanguagesViewController alloc] init];
-    UINavigationController *naviVc = [[UINavigationController alloc] initWithRootViewController:langVc];
-    [self presentViewController:naviVc animated:YES completion:nil];
+//    YDLanguagesViewController *langVc = [[YDLanguagesViewController alloc] init];
+//    UINavigationController *naviVc = [[UINavigationController alloc] initWithRootViewController:langVc];
+//    [self presentViewController:naviVc animated:YES completion:nil];
+    [YDHubWindow hudwindowShow];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [YDHubWindow hudwindowHide];
+    });
 }
 
 @end

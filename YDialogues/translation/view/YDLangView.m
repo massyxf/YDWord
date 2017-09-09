@@ -34,23 +34,23 @@
         UIButton *flagBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         NSString *img = [NSString countryImgWithId:lang];
         [flagBtn setImage:[UIImage imageNamed:img] forState:UIControlStateNormal];
-        [flagBtn addTarget:self action:@selector(flagBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [flagBtn addTarget:langView action:@selector(flagBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         [langView addSubview:flagBtn];
         langView.flagBtn = flagBtn;
         
         NSString *title = [NSString languageWithId:lang];
-        YDLangBtn *langBtn = [YDLangBtn buttonWithTitle:title target:self action:@selector(langBtnClicked:)];
+        YDLangBtn *langBtn = [YDLangBtn buttonWithTitle:title target:langView action:@selector(langBtnClicked:)];
         [langView addSubview:langBtn];
         langView.langBtn = langBtn;
         
         [flagBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.trailing.top.mas_equalTo(langView);
-            make.bottom.mas_equalTo(langBtn.mas_top).offset(-5);
+            make.bottom.mas_equalTo(langBtn.mas_top);
         }];
         
         [langBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.trailing.bottom.mas_equalTo(langView);
-            make.height.mas_equalTo(20);
+            make.height.mas_equalTo(25);
         }];
     }
     return langView;

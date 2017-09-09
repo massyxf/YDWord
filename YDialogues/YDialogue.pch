@@ -18,6 +18,10 @@
 #define YDNaviHeight 64
 #define YDTabbarHeight 49
 
+
+
+#define YDLogFunc NSLog(@"%s",__func__)
+
 #import "NSError+Custom.h"
 #import "UILabel+Normal.h"
 #import "UIView+FrameExtention.h"

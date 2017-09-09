@@ -11,6 +11,7 @@
 		421362D61F63901700E561BC /* NSString+YDCountryLang.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362D51F63901700E561BC /* NSString+YDCountryLang.m */; };
 		421362D91F639A5E00E561BC /* YDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362D81F639A5E00E561BC /* YDTextView.m */; };
 		421362DC1F639F8200E561BC /* YDKeyboardTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362DB1F639F8200E561BC /* YDKeyboardTool.m */; };
+		421362DF1F63D1C500E561BC /* YDHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362DE1F63D1C500E561BC /* YDHud.m */; };
 		421B84D41F4DB26C003FE9EE /* YDV2TManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D31F4DB26C003FE9EE /* YDV2TManager.m */; };
 		421B84D71F4DB27C003FE9EE /* YDV2TTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D61F4DB27C003FE9EE /* YDV2TTool.m */; };
 		421B84DA1F4DB28A003FE9EE /* YDT2VTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D91F4DB28A003FE9EE /* YDT2VTool.m */; };
@@ -144,6 +145,8 @@
 		421362D81F639A5E00E561BC /* YDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTextView.m; sourceTree = "<group>"; };
 		421362DA1F639F8200E561BC /* YDKeyboardTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDKeyboardTool.h; sourceTree = "<group>"; };
 		421362DB1F639F8200E561BC /* YDKeyboardTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDKeyboardTool.m; sourceTree = "<group>"; };
+		421362DD1F63D1C500E561BC /* YDHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDHud.h; sourceTree = "<group>"; };
+		421362DE1F63D1C500E561BC /* YDHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDHud.m; sourceTree = "<group>"; };
 		421B84D21F4DB26C003FE9EE /* YDV2TManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TManager.h; sourceTree = "<group>"; };
 		421B84D31F4DB26C003FE9EE /* YDV2TManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TManager.m; sourceTree = "<group>"; };
 		421B84D51F4DB27C003FE9EE /* YDV2TTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TTool.h; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 				425969381F4579FE00C1A817 /* YDRadiusView.m */,
 				42AF1ABC1F4D6E8E00851D9D /* YDWindowView.h */,
 				42AF1ABD1F4D6E8E00851D9D /* YDWindowView.m */,
+				421362DD1F63D1C500E561BC /* YDHud.h */,
+				421362DE1F63D1C500E561BC /* YDHud.m */,
 				421362D71F639A5E00E561BC /* YDTextView.h */,
 				421362D81F639A5E00E561BC /* YDTextView.m */,
 			);
@@ -981,6 +986,7 @@
 				428BD5DC1EE8EC5700463C1E /* NSString+FilePath.m in Sources */,
 				421B84D71F4DB27C003FE9EE /* YDV2TTool.m in Sources */,
 				42E7B2641F4E850E00C1A178 /* YDBDTransTool.m in Sources */,
+				421362DF1F63D1C500E561BC /* YDHud.m in Sources */,
 				4232B5F51F4ABFB6002532BD /* YDOcrTool.m in Sources */,
 				428BD5EF1EE9295B00463C1E /* UILabel+Normal.m in Sources */,
 				42E7B2731F4ED1A800C1A178 /* YDLangBtn.m in Sources */,

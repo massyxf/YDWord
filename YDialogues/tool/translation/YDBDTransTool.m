@@ -131,7 +131,7 @@
             langStr = @"cht";
             break;
         case YDBDLangVie:
-            langStr = @"view";
+            langStr = @"vie";
             break;
         default:
             break;
