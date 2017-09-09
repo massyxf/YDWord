@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421362D31F6389C600E561BC /* YDTransBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362D21F6389C600E561BC /* YDTransBottomView.m */; };
+		421362D61F63901700E561BC /* NSString+YDCountryLang.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362D51F63901700E561BC /* NSString+YDCountryLang.m */; };
+		421362D91F639A5E00E561BC /* YDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362D81F639A5E00E561BC /* YDTextView.m */; };
+		421362DC1F639F8200E561BC /* YDKeyboardTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421362DB1F639F8200E561BC /* YDKeyboardTool.m */; };
 		421B84D41F4DB26C003FE9EE /* YDV2TManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D31F4DB26C003FE9EE /* YDV2TManager.m */; };
 		421B84D71F4DB27C003FE9EE /* YDV2TTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D61F4DB27C003FE9EE /* YDV2TTool.m */; };
 		421B84DA1F4DB28A003FE9EE /* YDT2VTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B84D91F4DB28A003FE9EE /* YDT2VTool.m */; };
@@ -125,8 +129,6 @@
 		42D70AF81F46E04F00DF02AB /* YDYoudaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D70AF71F46E04F00DF02AB /* YDYoudaoModel.m */; };
 		42D756401F45BECA0025B7D6 /* YDTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */; };
 		42E7B2641F4E850E00C1A178 /* YDBDTransTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7B2631F4E850E00C1A178 /* YDBDTransTool.m */; };
-		42E7B26A1F4EBE4800C1A178 /* YDV2TBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7B2691F4EBE4800C1A178 /* YDV2TBottomView.m */; };
-		42E7B26D1F4EBE5A00C1A178 /* YDT2TBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7B26C1F4EBE5A00C1A178 /* YDT2TBottomView.m */; };
 		42E7B2701F4ED14100C1A178 /* YDLangView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7B26F1F4ED14100C1A178 /* YDLangView.m */; };
 		42E7B2731F4ED1A800C1A178 /* YDLangBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7B2721F4ED1A800C1A178 /* YDLangBtn.m */; };
 		4C999AD4587F3DB61D4D85F9 /* libPods-YDialogues.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D89C3DC092C00F9C2F034C9 /* libPods-YDialogues.a */; };
@@ -134,6 +136,14 @@
 
 /* Begin PBXFileReference section */
 		339735FA8DAFA5E4C483A4C5 /* Pods-YDialogues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDialogues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YDialogues/Pods-YDialogues.debug.xcconfig"; sourceTree = "<group>"; };
+		421362D11F6389C600E561BC /* YDTransBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTransBottomView.h; sourceTree = "<group>"; };
+		421362D21F6389C600E561BC /* YDTransBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTransBottomView.m; sourceTree = "<group>"; };
+		421362D41F63901700E561BC /* NSString+YDCountryLang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YDCountryLang.h"; sourceTree = "<group>"; };
+		421362D51F63901700E561BC /* NSString+YDCountryLang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YDCountryLang.m"; sourceTree = "<group>"; };
+		421362D71F639A5E00E561BC /* YDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTextView.h; sourceTree = "<group>"; };
+		421362D81F639A5E00E561BC /* YDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTextView.m; sourceTree = "<group>"; };
+		421362DA1F639F8200E561BC /* YDKeyboardTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDKeyboardTool.h; sourceTree = "<group>"; };
+		421362DB1F639F8200E561BC /* YDKeyboardTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDKeyboardTool.m; sourceTree = "<group>"; };
 		421B84D21F4DB26C003FE9EE /* YDV2TManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TManager.h; sourceTree = "<group>"; };
 		421B84D31F4DB26C003FE9EE /* YDV2TManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TManager.m; sourceTree = "<group>"; };
 		421B84D51F4DB27C003FE9EE /* YDV2TTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TTool.h; sourceTree = "<group>"; };
@@ -317,10 +327,6 @@
 		42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTimeTool.m; sourceTree = "<group>"; };
 		42E7B2621F4E850E00C1A178 /* YDBDTransTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDBDTransTool.h; sourceTree = "<group>"; };
 		42E7B2631F4E850E00C1A178 /* YDBDTransTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDBDTransTool.m; sourceTree = "<group>"; };
-		42E7B2681F4EBE4800C1A178 /* YDV2TBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDV2TBottomView.h; sourceTree = "<group>"; };
-		42E7B2691F4EBE4800C1A178 /* YDV2TBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDV2TBottomView.m; sourceTree = "<group>"; };
-		42E7B26B1F4EBE5A00C1A178 /* YDT2TBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDT2TBottomView.h; sourceTree = "<group>"; };
-		42E7B26C1F4EBE5A00C1A178 /* YDT2TBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDT2TBottomView.m; sourceTree = "<group>"; };
 		42E7B26E1F4ED14100C1A178 /* YDLangView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDLangView.h; sourceTree = "<group>"; };
 		42E7B26F1F4ED14100C1A178 /* YDLangView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDLangView.m; sourceTree = "<group>"; };
 		42E7B2711F4ED1A800C1A178 /* YDLangBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDLangBtn.h; sourceTree = "<group>"; };
@@ -444,10 +450,8 @@
 				42E7B2721F4ED1A800C1A178 /* YDLangBtn.m */,
 				42E7B26E1F4ED14100C1A178 /* YDLangView.h */,
 				42E7B26F1F4ED14100C1A178 /* YDLangView.m */,
-				42E7B2681F4EBE4800C1A178 /* YDV2TBottomView.h */,
-				42E7B2691F4EBE4800C1A178 /* YDV2TBottomView.m */,
-				42E7B26B1F4EBE5A00C1A178 /* YDT2TBottomView.h */,
-				42E7B26C1F4EBE5A00C1A178 /* YDT2TBottomView.m */,
+				421362D11F6389C600E561BC /* YDTransBottomView.h */,
+				421362D21F6389C600E561BC /* YDTransBottomView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -459,6 +463,8 @@
 				425969381F4579FE00C1A817 /* YDRadiusView.m */,
 				42AF1ABC1F4D6E8E00851D9D /* YDWindowView.h */,
 				42AF1ABD1F4D6E8E00851D9D /* YDWindowView.m */,
+				421362D71F639A5E00E561BC /* YDTextView.h */,
+				421362D81F639A5E00E561BC /* YDTextView.m */,
 			);
 			path = "custom view";
 			sourceTree = "<group>";
@@ -565,6 +571,8 @@
 				428BD5DB1EE8EC5700463C1E /* NSString+FilePath.m */,
 				42CCB4881EF262A700995C0B /* NSString+YDHandle.h */,
 				42CCB4891EF262A700995C0B /* NSString+YDHandle.m */,
+				421362D41F63901700E561BC /* NSString+YDCountryLang.h */,
+				421362D51F63901700E561BC /* NSString+YDCountryLang.m */,
 				428BD5ED1EE9295B00463C1E /* UILabel+Normal.h */,
 				428BD5EE1EE9295B00463C1E /* UILabel+Normal.m */,
 				42AF1AB61F4D542400851D9D /* UIView+FrameExtention.h */,
@@ -636,6 +644,8 @@
 				4298A63B1EEA961A0097BF1D /* YDRegexTool.m */,
 				42D7563E1F45BECA0025B7D6 /* YDTimeTool.h */,
 				42D7563F1F45BECA0025B7D6 /* YDTimeTool.m */,
+				421362DA1F639F8200E561BC /* YDKeyboardTool.h */,
+				421362DB1F639F8200E561BC /* YDKeyboardTool.m */,
 				42CCB44A1EF23C2900995C0B /* src */,
 			);
 			path = tool;
@@ -925,6 +935,7 @@
 			files = (
 				42D70AF81F46E04F00DF02AB /* YDYoudaoModel.m in Sources */,
 				42D756401F45BECA0025B7D6 /* YDTimeTool.m in Sources */,
+				421362D91F639A5E00E561BC /* YDTextView.m in Sources */,
 				4298A63C1EEA961A0097BF1D /* YDRegexTool.m in Sources */,
 				4298A6131EEA50020097BF1D /* YDNetServerManager.m in Sources */,
 				42CCB47E1EF23C2A00995C0B /* DOUAudioStreamer+Options.m in Sources */,
@@ -932,6 +943,7 @@
 				42CCB4741EF23C2A00995C0B /* DOUAudioAnalyzer.m in Sources */,
 				42CCB4801EF23C2A00995C0B /* DOUAudioVisualizer.m in Sources */,
 				4298A6231EEA7BB60097BF1D /* YDBaseModel.m in Sources */,
+				421362D31F6389C600E561BC /* YDTransBottomView.m in Sources */,
 				42AF1ABE1F4D6E8E00851D9D /* YDWindowView.m in Sources */,
 				42CCB4781EF23C2A00995C0B /* DOUAudioFileProvider.m in Sources */,
 				42D70AD21F46BA1900DF02AB /* YDYoudaoTransTool.m in Sources */,
@@ -942,7 +954,6 @@
 				42CCB47F1EF23C2A00995C0B /* DOUAudioStreamer.m in Sources */,
 				421B84D41F4DB26C003FE9EE /* YDV2TManager.m in Sources */,
 				42AF1AB81F4D542400851D9D /* UIView+FrameExtention.m in Sources */,
-				42E7B26D1F4EBE5A00C1A178 /* YDT2TBottomView.m in Sources */,
 				42D70AF51F46D54400DF02AB /* NSString+Hashes.m in Sources */,
 				42CCB4771EF23C2A00995C0B /* DOUAudioFilePreprocessor.m in Sources */,
 				42AF1AB51F4D33E600851D9D /* YDV2TCell.m in Sources */,
@@ -960,9 +971,11 @@
 				42CCB4791EF23C2A00995C0B /* DOUAudioFrequencyAnalyzer.m in Sources */,
 				425969321F454A7A00C1A817 /* YDCommonModel.m in Sources */,
 				42CCB4821EF23C2A00995C0B /* DOUMPMediaLibraryAssetLoader.m in Sources */,
+				421362D61F63901700E561BC /* NSString+YDCountryLang.m in Sources */,
 				428BD5941EE8E19800463C1E /* main.m in Sources */,
 				42CCB4831EF23C2A00995C0B /* DOUSimpleHTTPRequest.m in Sources */,
 				4232B5F21F4ABE2D002532BD /* YDOcrViewController.m in Sources */,
+				421362DC1F639F8200E561BC /* YDKeyboardTool.m in Sources */,
 				4232B5F81F4ABFE9002532BD /* YDYoudaoConfig.m in Sources */,
 				42E7B2701F4ED14100C1A178 /* YDLangView.m in Sources */,
 				428BD5DC1EE8EC5700463C1E /* NSString+FilePath.m in Sources */,
@@ -970,7 +983,6 @@
 				42E7B2641F4E850E00C1A178 /* YDBDTransTool.m in Sources */,
 				4232B5F51F4ABFB6002532BD /* YDOcrTool.m in Sources */,
 				428BD5EF1EE9295B00463C1E /* UILabel+Normal.m in Sources */,
-				42E7B26A1F4EBE4800C1A178 /* YDV2TBottomView.m in Sources */,
 				42E7B2731F4ED1A800C1A178 /* YDLangBtn.m in Sources */,
 				42AF1AB21F4D26E100851D9D /* YDV2TViewController.m in Sources */,
 				42CCB4761EF23C2A00995C0B /* DOUAudioEventLoop.m in Sources */,

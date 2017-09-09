@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"country";
+    [self.tableView setTableFooterView:[[UIView alloc] init]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +39,10 @@
 
 #pragma mark - Table view data source
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
 }
@@ -50,6 +56,10 @@
     cell.detailTextLabel.text = @"detail";
     cell.imageView.image = [UIImage imageNamed:@"flag_1"];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

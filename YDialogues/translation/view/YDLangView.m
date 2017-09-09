@@ -9,35 +9,41 @@
 #import "YDLangView.h"
 #import "YDLangBtn.h"
 #import <Masonry/Masonry.h>
+#import "NSString+YDCountryLang.h"
 
 @interface YDLangView ()
 
 /** flag*/
-@property(nonatomic,weak)UIImageView *flagView;
+@property(nonatomic,weak)UIButton *flagBtn;
 
 /** lang*/
 @property(nonatomic,weak)YDLangBtn *langBtn;
 
-/** action lang*/
-@property(nonatomic,copy)void (^langAction)();
+/** type*/
+@property(nonatomic,assign)YDLangViewType type;
 
 @end
 
 @implementation YDLangView
 
-+(instancetype)initWithTitle:(NSString *)title langBtnAction:(void (^)())langAction{
++(instancetype)initWithType:(YDLangViewType)langType lang:(NSInteger)lang{
     YDLangView *langView = [[YDLangView alloc] initWithFrame:CGRectZero];
     if (langView) {
-        langView.langAction = langAction;
-        UIImageView *flagView = [[UIImageView alloc] init];
-        [langView addSubview:flagView];
-        langView.flagView = flagView;
+        langView.type = langType;
         
+        UIButton *flagBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        NSString *img = [NSString countryImgWithId:lang];
+        [flagBtn setImage:[UIImage imageNamed:img] forState:UIControlStateNormal];
+        [flagBtn addTarget:self action:@selector(flagBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [langView addSubview:flagBtn];
+        langView.flagBtn = flagBtn;
+        
+        NSString *title = [NSString languageWithId:lang];
         YDLangBtn *langBtn = [YDLangBtn buttonWithTitle:title target:self action:@selector(langBtnClicked:)];
         [langView addSubview:langBtn];
         langView.langBtn = langBtn;
         
-        [flagView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [flagBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.trailing.top.mas_equalTo(langView);
             make.bottom.mas_equalTo(langBtn.mas_top).offset(-5);
         }];
@@ -50,13 +56,27 @@
     return langView;
 }
 
--(void)flagViewAddGesture:(UIGestureRecognizer *)gesture{
-    _flagView.userInteractionEnabled = YES;
-    [_flagView addGestureRecognizer:gesture];
+-(void)setLang:(NSInteger)lang{
+    if (_lang != lang) {
+        _lang = lang;
+        NSString *img = [NSString countryImgWithId:lang];
+        [_flagBtn setImage:[UIImage imageNamed:img] forState:UIControlStateNormal];
+        NSString *title = [NSString languageWithId:lang];
+        [_langBtn setTitle:title forState:UIControlStateNormal];
+        [_langBtn layoutIfNeeded];
+    }
 }
 
 -(IBAction)langBtnClicked:(id)sender{
-    !_langAction ? : _langAction();
+    if ([self.delegate respondsToSelector:@selector(langViewChangeCountry:)]) {
+        [self.delegate langViewChangeCountry:self];
+    }
+}
+
+-(IBAction)flagBtnClicked:(id)sender{
+    if ([self.delegate respondsToSelector:@selector(langViewSendMsg:)]) {
+        [self.delegate langViewSendMsg:self];
+    }
 }
 
 @end
